@@ -1,0 +1,152 @@
+
+
+
+
+*{
+    margin: 0;
+    padding: 0
+}
+.wrapper{
+    position: relative;
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 40
+}
+.opacity {
+  background: rgba(79,70,62,0.5);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+z-index: -1;
+}
+.gravity {
+	width: 100%;
+	text-align: center;
+	padding: 70px 0;
+}
+.gravity .logo{
+
+}
+.gravity P {
+  color: #d0d0d0;
+  font-family: "Raleway",sans-serif;
+  font-size: 23px;
+  font-weight: 600;
+  text-align: center;
+    padding-top: 90px
+}
+.countdown .back-text h4{
+    color: red;
+    background: red
+}
+#countdown {
+  margin-top: 75px;
+}
+.email{
+    text-align: center;
+    padding-top: 120px;
+    z-index: 100;
+}
+.email p {
+  color: #fff;
+  font-family: "Raleway",sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  margin: 20px 0 50px;
+}
+.email input[type="email"] {
+    background: #403c3b;
+    text-transform: uppercase;
+    border: none;
+    color: #fff;
+    width: 390px;
+    padding: 20px;
+    font-size: 15px;
+    border: 2px solid #eadada;
+}
+.email input[type="submit"] {
+  background: #188588;
+  border: medium none;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px;
+  width: 100px;
+  margin-left: -115px;
+}
+.email input[placeholder] {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.social-icon {
+	margin-top: 160px;
+	padding: 25px 0;
+}
+.icon {
+    width: 165px;
+    margin: 0px auto;
+}
+.icon i {
+  color: #fff;
+  font-size: 21px;
+  padding: 9px;
+  color: #13a3a7;
+}
+.countDays{
+    position: relative;
+}
+.countDays::after{
+    position: absolute;
+    content: 'days';
+    color: #fff;
+    top: 0px;
+    left: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+.countHours{
+    position: relative;
+}
+.countHours::after {
+  color: #fff;
+  content: "hours";
+  font-family: "Raleway",sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  left: 2px;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 0;
+}
+.countMinutes{
+    position: relative;
+}
+.countMinutes::after{
+    position: absolute;
+    content: 'minutes';
+    color: #fff;
+    top: 0px;
+    left: -10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+.countSeconds{
+    position: relative;
+}
+.countSeconds::after{
+    position: absolute;
+    content: 'seconds';
+    color: #fff;
+    top: 0px;
+    left: -10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}

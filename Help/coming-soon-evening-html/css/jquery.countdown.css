@@ -1,0 +1,57 @@
+.countdownHolder{
+	width:640px;
+	margin:0 auto;
+	font: 40px/1.5 'Open Sans Condensed',sans-serif;
+	text-align:center;
+	letter-spacing:-10px;
+}
+
+.position{
+	display: inline-block;
+	height: 1.6em;
+	overflow: hidden;
+	position: relative;
+	width: 0.50em;
+    font-size: 70px
+}
+
+.digit {
+  background-color: transparent;
+  border-radius: 0.2em;
+  color: #fff;
+  display: block;
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  position: absolute;
+  text-align: center;
+  width: 0.5em;
+}
+.countDays{ /* display:none !important;*/ }
+.countDiv0{ /* display:none !important;*/ }
+.countHours{}
+.countDiv1{}
+.countMinutes{}
+.countDiv2{}
+.countSeconds{}
+
+
+.countDiv{
+	display:inline-block;
+	width:60px;
+	height:2.7em;
+	position:relative;
+}
+
+
+.countDiv::after {
+  background-color: #151414;
+  content: "";
+  display: none;
+  height: 100px;
+  left: 50%;
+  margin-left: -3px;
+  position: absolute;
+  top: 5px;
+  width: 3px;
+}

@@ -1,0 +1,321 @@
+/* ==================================================================
+
+*   Zoon Media Queries
+*   url: styleshout.com
+*   06-07-2014
+
+/* ================================================================== */
+
+
+/* screenwidth less than 1140px
+--------------------------------------------------------------------- */
+@media only screen and (max-width: 1140px) {
+
+	/* Intro Styles
+	------------------------------------------------------------------ */
+	#intro {	min-height: 828px; }
+
+	/* Header 
+	------------------------------------------------------------------ */
+	header #logo {	
+		top: 66px;	
+		width: 100px;
+		margin-left: -50px;
+	}
+
+   /* main
+   ------------------------------------------------------------------ */
+   #main { margin-top: 90px; }
+  	#main h1 { 
+  		font: 38px/1.2em 'montserrat-bold', sans-serif; 
+  		padding: 0 15%;
+  	}
+	#main p { font: 16px/30px 'montserrat-regular', sans-serif; }
+
+	/* counter */
+	#main #counter { 
+		width: 70%;
+		margin: 12px auto 0; 
+	}
+	#main #counter span { font: 60px/1em 'merriweather-bold', serif;	}
+
+	/* mailchimp form */
+	#main #mc_embed_signup { margin-bottom: 6px; }
+
+}
+
+/* screenwidth less than 900px
+--------------------------------------------------------------------- */
+@media only screen and (max-width: 900px) {
+
+	/* intro styles
+	------------------------------------------------------------------ */
+	#intro {	min-height: 792px; }
+
+   /* main
+   ------------------------------------------------------------------ */
+   #main h1 { 
+  		font: 35px/1.2em 'montserrat-bold', sans-serif; 
+  		padding: 0 8%;
+  	}
+  	#main p { 
+  		font: 16px/30px 'montserrat-regular', sans-serif;
+  		padding: 0 10%; 
+  	}
+
+  	/* counter */
+	#main #counter { width: 80%; }
+	#main #counter span { font: 58px/1em 'merriweather-bold', serif;	}
+
+	/* mailchimp form */
+	#main #mc_embed_signup { 
+		width: 65%; 
+		margin-top: 36px;
+	}
+
+	/* about section
+   ------------------------------------------------------------------ */
+   #about { padding-top: 84px}
+   #about .section-header .icon-wrap { font-size: 55px; }
+	#about .section-header h1,
+	#call-to-action h2 {	font: 28px/36px 'montserrat-bold', sans-serif; }
+
+	#call-to-action .section-ads { padding-top: 42px; }
+	#call-to-action p { padding: 0 10%; }
+
+	/* location section
+	------------------------------------------------------------------ */   
+	#location .contacts .row .columns { width: 50%; }
+	#location .contacts .row .end { clear: both; }	
+
+}
+
+/* mobile 
+---------------------------------------------------------------------- */
+@media only screen and (max-width: 767px) {
+
+	/* intro styles
+	------------------------------------------------------------------ */
+	header #logo {	
+		top: 30px;	
+		width: 90px;
+		margin-left: -45px;			
+	}
+
+	/* primary navigation
+	--------------------------------------------------------------------- */
+	#nav-wrap > a { right: 0; }
+	#nav-wrap ul#nav { 
+		background: #111;
+		right: 0; 
+	}
+
+   /* main
+   ------------------------------------------------------------------ */
+   #main { margin-top: 48px; }
+  	#main h1 { 
+  		font: 30px/1.2em 'montserrat-bold', sans-serif; 
+  		text-align: center;  		
+  	}
+  	#main p {	
+		font: 14px/24px 'montserrat-regular', sans-serif;		
+		margin-bottom: 15px;
+		text-align: center;
+	}
+  	#main h5 {
+		font: 12px/24px 'montserrat-bold', sans-serif;
+		text-align: center;
+	}
+
+  	/* counter */
+	#main #counter {
+		width: 100%;		
+		margin: 12px 0 30px;
+	}
+	#main #counter span { 
+		font: 46px/1em 'merriweather-bold', serif;	
+		padding: 9px 0 15px;
+	}
+	#main #counter span em {
+		font: 9px/18px 'montserrat-regular', sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 1px;		
+		margin-top: 6px;
+	}
+
+	/* mailchimp form */
+	#main #mc_embed_signup {
+		clear: both;
+		margin: 12px auto 0;
+		width: 75%;
+	}
+	#main #mc-embedded-subscribe-form {
+		margin-bottom: 0;
+	}
+	#main #mc_embed_signup input[type="email"] {
+		width: 100%;
+		border-radius: 3px;
+		float: none;
+		text-align: center;
+	}
+	#main #mc_embed_signup input[type="submit"] {
+		width: 100%;
+		border-radius: 3px;
+		float: none;
+	}
+
+	/* social links */
+	#main .social {
+		margin: 12px 0 24px;
+	   font-size: 18px;
+	   text-align: center
+	}
+	#main .social li { margin: 0 8px; }
+
+
+	/* about section
+   -------------------------------------------------------------------- */
+   #about {	padding-top: 72px; }
+   #about .icon-wrap {
+   	text-align: center; 
+   	margin-bottom: 30px;
+   }
+   #about .header { text-align: center; }
+   #about h1 {	font: 26px/36px 'montserrat-bold', sans-serif; }   
+
+   /* Call To Action Section
+   ----------------------------------------------------------------- */
+   #call-to-action h2 {	font: 26px/36px 'montserrat-bold', sans-serif; }
+   #call-to-action .action,
+   #call-to-action .action a  { 
+		width: 100%;
+		position: static;	
+		text-align: center;	
+	}
+
+	/* location section
+	------------------------------------------------------------------ */ 
+	#location .contacts { padding-top: 54px; }
+	#location .contacts .row .columns { 
+		text-align: center;
+		width: 100%; 
+		float: none;
+	}	
+
+   /* footer
+   ------------------------------------------------------------------------ */
+  	footer {	padding-bottom: 30px; }
+
+   /* copyright */
+	footer .copyright { text-align: center; }
+   footer .copyright li:before { content: none; }
+   footer .copyright li { 
+   	margin: 0; 
+   	display: block;
+   	line-height: 27px;
+   }
+
+}
+
+/* screenwidth less than 460px
+  -------------------------------------------------------------------------- */
+@media only screen and (max-width: 460px) {
+
+	/* intro styles
+	------------------------------------------------------------------ */
+	#intro {	min-height: 780px; }
+   
+   /* main
+   ------------------------------------------------------------------ */
+   #main h1 { 
+  		font: 28px/1.2em 'montserrat-bold', sans-serif; 
+		padding: 0 5px;
+  	}
+    
+  	/* counter */
+	#main #counter {
+		width: 100%;		
+		margin: 0 0 24px;
+	}
+	#main #counter span { 
+		font: 40px/1em 'merriweather-bold', serif;	
+		padding: 9px 0 15px;
+		border: none;
+	}
+	#main #counter span em {
+		font: 9px/18px 'montserrat-regular', sans-serif;
+		margin-top: 6px;
+	} 
+
+	/* mailchimp form */
+	#main #mc_embed_signup { width: 80%; }
+
+
+	/* about section
+   ------------------------------------------------------------------ */
+   #about .section-header .icon-wrap { font-size: 50px; }
+	#about .section-header h1,
+	#call-to-action h2 {
+		font: 24px/30px 'montserrat-bold', sans-serif;
+		padding: 0;
+	}
+	#about p.lead {
+		font: 16px/33px 'merriweather-light', sans-serif;
+		padding: 0;
+	}
+	#call-to-action .action a.button { width: 100%; }  
+
+   /* footer
+   ------------------------------------------------------------------------ */
+
+   /* social links */
+   footer .social-links { font-size: 20px; }
+   footer .social-links li { margin-left: 14px; }  
+
+   /* Go To Top Button */
+	#go-top { right: 15px; } 
+
+}
+
+/* screenwidth less than 400px
+  -------------------------------------------------------------------------- */
+@media only screen and (max-width: 400px) {
+
+	/* intro styles
+	------------------------------------------------------------------ */
+	#intro {	min-height: 744px; }
+
+	/* main
+   ------------------------------------------------------------- */
+   #main { margin-top: 42px; }
+   #main h1 { font: 25px/1.2em 'montserrat-bold', sans-serif; 	}
+  	#main p { font: 12px/21px 'montserrat-regular', sans-serif;	}
+
+  	/* counter
+   ------------------------------------------------------------- */
+	#main #counter span { 
+		font: 35px/1em 'merriweather-bold', serif;	
+		padding: 9px 0 15px;		
+	}
+	#main #counter span em {
+		font: 9px/18px 'montserrat-regular', sans-serif;
+		margin-top: 6px;
+	}
+
+	/* mailchimp form */
+	#main #mc_embed_signup { width: 90%; }
+
+	/* header social links */
+   #main .social { font-size: 17px;}
+   #main .social li { margin: 0 6px; }
+
+}
+
+
+
+
+
+
+
+
+
