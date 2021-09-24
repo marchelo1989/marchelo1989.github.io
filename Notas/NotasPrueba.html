@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Notas</title>
+</head>
+
+<body>
+	
+<h1>Notas Ensayo</h1>
+	<!--<caption>Esto es la leyenda</caption>-->
+	<table border="1">
+	  <tr>
+		<th width="20%" scope="col">Nombre</th>
+		<th width="10%" scope="col">Retraso</th>
+		<th width="70%" scope="col"></th>
+	  </tr>
+		
+	  <tr>
+		  <td><p id="Nombre1"></p></td>
+		  <td align="center"><p id="retraso1" ></p></td>
+		  <td><p id="retraso2" ></p></td>
+	  </tr>
+	</table>
+	
+	<p></p>
+	<table border="1">
+		<tr>
+		  	<th colspan="3">Criterios de evaluación</th>
+	  	</tr>
+		<tr>
+			<th colspan="2">INTRODUCCIÓN (20%)</th>
+			<th>Comentario en rubrica</th>
+		</tr>
+		<tr>
+			<td width="30%" >Planteo del problema</td>
+			<td width="10%" align="center"><p id="introdu1" ></p></td>
+			<td width="60%"><p id="introdu11" ></p></td>
+		</tr>
+		
+		<tr>
+			<td>Definición de términos relevantes</td>
+			<td align="center"><p id="introdu2" ></p></td>
+			<td><p id="introdu21" ></p></td>
+		</tr>
+		
+		<tr>
+			<td>Presentación de argumento central</td>
+			<td align="center"><p id="introdu3" ></p></td>
+			<td><p id="introdu31" ></p></td>
+		</tr>
+		<tr>
+			<th colspan="2">DESARROLLO (30%)</th>
+			<th></th>
+		</tr>
+		<tr>
+			<td>Estructura y orden en la presentación</td>
+			<td align="center"><p id="desarro1" ></p></td>
+			<td><p id="desarro11" ></p></td>
+		</tr>
+		<tr>
+			<td>Calidad de los análisis</td>
+			<td align="center"><p id="desarro2" ></p></td>
+			<td><p id="desarro21" ></p></td>
+		</tr>
+		<tr>
+			<td>Relación con argumento central</td>
+			<td align="center"><p id="desarro3" ></p></td>
+			<td><p id="desarro31" ></p></td>
+		</tr>
+		<tr>
+			<th colspan="2">CONCLUSIONES (20%)</th>
+			<th></th>
+		</tr>
+		<tr>
+			<td>Relación con el argumento inicial</td>
+			<td align="center"><p id="concl1" ></p></td>
+			<td><p id="concl11" ></p></td>
+		</tr>
+		<tr>
+			<td>Aportación personal</td>
+			<td align="center"><p id="concl2" ></p></td>
+			<td><p id="concl21" ></p></td>
+		</tr>
+		<tr>
+			<td>Relevancia para la discusión</td>
+			<td align="center"><p id="concl3" ></p></td>
+			<td><p id="concl31" ></p></td>
+		</tr>
+		<tr>
+			<th colspan="2">BIBLIOGRAFÍA (10%)</th>
+			<th></th>
+		</tr>
+		<tr>
+			<td>Bibliografía</td>
+			<td align="center"><p id="biblio1" ></p></td>
+			<td><p id="biblio11" ></p></td>
+		</tr>
+		<tr>
+			<td>Citas en texto</td>
+			<td align="center"><p id="biblio2" ></p></td>
+			<td><p id="biblio21" ></p></td>
+		</tr>
+		<tr>
+			<th colspan="2">ASPECTOS FORMALES (20%)</th>
+			<th></th>
+		</tr>
+		<tr>
+			<td>Ortografía</td>
+			<td align="center"><p id="aspec1" ></p></td>
+			<td><p id="aspec11" ></p></td>
+		</tr>
+		<tr>
+			<td>Extensión</td>
+			<td align="center"><p id="aspec2" ></p></td>
+			<td><p id="aspec21" ></p></td>
+		</tr>
+		
+		<tr>
+			<td>Puntaje</td>
+			<td align="center"><p id="punta1" ></p></td>
+		</tr>
+		<tr>
+			<td>Nota Parcial</td>
+			<td align="center"><p id="NotaPar1" ></p></td>
+		</tr>
+		<tr>
+			<td>Descuento por retraso</td>
+			<td align="center"><p id="descuenRetra1" ></p></td>
+		</tr>
+		<tr>
+			<td>Nota Ensayo</td>
+			<td align="center"><p id="NotaEnsa1" ></p></td>
+		</tr>
+	</table>
+	<p id="Coment1"></p>
+	
+	<script>
+		document.getElementById("Nombre1").innerHTML = " "+localStorage.Nombre+" ";
+		document.getElementById("retraso1").innerHTML = localStorage.Retraso;
+		document.getElementById("retraso2").innerHTML = "El trabajo fue entregado con "+localStorage.Retraso+" día de retraso!";
+		
+		document.getElementById("introdu1").innerHTML = localStorage.intro1;
+		if(localStorage.intro1==1){
+			document.getElementById("introdu11").innerHTML ="No se plantea problema";
+		}if(localStorage.intro1==2){
+			document.getElementById("introdu11").innerHTML ="Se plantea el problema irrelevante para los objetivos del curso";
+		}if(localStorage.intro1==3){
+			document.getElementById("introdu11").innerHTML ="Se plantea un problema relevante, aunque de manera confusa y desordenada";
+		}if(localStorage.intro1==4){
+			document.getElementById("introdu11").innerHTML ="Se plantea un problema con claridad y concisión y sustentado en la literatura y lo discutido en clases";
+		}if(localStorage.intro1==5){
+			document.getElementById("introdu11").innerHTML ="Se plantea un problema original con claridad y concisión y bien sustentado en la literatura y lo discutido en clases";
+		}
+		
+		document.getElementById("introdu2").innerHTML = localStorage.intro2;
+		if(localStorage.intro2==1){
+			document.getElementById("introdu21").innerHTML="No hay definiciones";
+		}if(localStorage.intro2==2){
+			document.getElementById("introdu21").innerHTML="Hay definiciones equivocadas, confusión conceptual, mala atribución a autores";
+		}if(localStorage.intro2==3){
+			document.getElementById("introdu21").innerHTML="Se muestra cierto conocimiento de definiciones, pero no se presentan correctamente";
+		}if(localStorage.intro2==4){
+			document.getElementById("introdu21").innerHTML="Se presentan definiciones correctas y atribuidas a sus autores";
+		}if(localStorage.intro2==5){
+			document.getElementById("introdu21").innerHTML="Se define correctamente de acuerdo a literatura y se compara con otras definiciones pertinentes";
+		}
+		
+		document.getElementById("introdu3").innerHTML = localStorage.intro3;
+		if(localStorage.intro3==1){
+                document.getElementById("introdu31").innerHTML="No hay argumento";
+		}if(localStorage.intro3==2){
+			document.getElementById("introdu31").innerHTML="Se presenta un argumento, pero basado en definiciones equivocadas";
+		}if(localStorage.intro3==3){
+			document.getElementById("introdu31").innerHTML="Se esboza un argumento, aunque confuso y desordenado";
+		}if(localStorage.intro3==4){
+			document.getElementById("introdu31").innerHTML="Se presenta clara y concisamente un argumento ya discutido en la literatura o lo discutido en clases";
+		}if(localStorage.intro3==5){
+			document.getElementById("introdu31").innerHTML="Se presenta un argumento original, claro, conciso y bien sustentado en la literatura o lo discutido en clases";
+		}
+		
+		document.getElementById("desarro1").innerHTML = localStorage.desa1;
+		if(localStorage.desa1==1){
+			document.getElementById("desarro11").innerHTML="Presentación desorganizada que dificulta la lectura";
+		}if(localStorage.desa1==2){
+			document.getElementById("desarro11").innerHTML="Presentación impide detectar la presencia de una introducción, desarrollo y conclusión";
+		}if(localStorage.desa1==3){
+			document.getElementById("desarro11").innerHTML="Hay introducción, desarrollo y conclusión, pero están confusos y desordenados";
+		}if(localStorage.desa1==4){
+			document.getElementById("desarro11").innerHTML="Se reconocen introducción, desarrollo y conclusión y se organizan ordenadamente";
+		}if(localStorage.desa1==5){
+			document.getElementById("desarro11").innerHTML="Se reconocen introducción, desarrollo y conclusión y se organizan de manera original";
+		}
+		
+		document.getElementById("desarro2").innerHTML = localStorage.desa2;
+		if(localStorage.desa2==1){
+			document.getElementById("desarro21").innerHTML="No hay análisis";
+		}if(localStorage.desa2==2){
+			document.getElementById("desarro21").innerHTML="Hay análisis, pero basado en premisas o definiciones equivocadas";
+		}if(localStorage.desa2==3){
+			document.getElementById("desarro21").innerHTML="La evidencia y/o la literatura se presentan desorganizadas";
+		}if(localStorage.desa2==4){
+			document.getElementById("desarro21").innerHTML="Hay un correcto análisis de la literatura y/o la evidencia";
+		}if(localStorage.desa2==5){
+			document.getElementById("desarro21").innerHTML="Hay análisis crítico y original de la literatura y/o la evidencia";
+		}
+		
+		document.getElementById("desarro3").innerHTML = localStorage.desa3;
+		if(localStorage.desa3==1){
+			document.getElementById("desarro31").innerHTML="No hay relación con el argumento inicial";
+		}if(localStorage.desa3==2){
+			document.getElementById("desarro31").innerHTML="Se esboza alguna relación con el argumento inicial , pero es confusa o forzada";
+		}if(localStorage.desa3==3){
+			document.getElementById("desarro31").innerHTML="Se presentan algunas relaciones con el argumento inicial, aunque con definiciones informales";
+		}if(localStorage.desa3==4){
+			document.getElementById("desarro31").innerHTML="El argumento inicial se relaciona con el análisis presentado";
+		}if(localStorage.desa3==5){
+			document.getElementById("desarro31").innerHTML="El argumento central y el análisis presentado se relacionan de manera original y creativa";
+		}
+		
+		document.getElementById("concl1").innerHTML = localStorage.conclu1;
+		if(localStorage.conclu1==1){
+			document.getElementById("concl11").innerHTML="No hay relación con el argumento inicial";
+		}if(localStorage.conclu1==2){
+			document.getElementById("concl11").innerHTML="Se esboza alguna relación con el argumento inicial , pero es confusa o forzada";
+		}if(localStorage.conclu1==3){
+			document.getElementById("concl11").innerHTML="Se presentan algunas relaciones con el argumento inicial, aunque con definiciones informales";
+		}if(localStorage.conclu1==4){
+			document.getElementById("concl11").innerHTML="El argumento inicial se relaciona con el análisis presentado";
+		}if(localStorage.conclu1==5){
+			document.getElementById("concl11").innerHTML="El argumento central y el análisis presentado se relacionan de manera original y creativa";
+		}
+		
+		document.getElementById("concl2").innerHTML = localStorage.conclu2;
+		if(localStorage.conclu2==1){
+			document.getElementById("concl21").innerHTML="No se presenta contribución";
+		}if(localStorage.conclu2==2){
+			document.getElementById("concl21").innerHTML="Se presentan ideas ajenas como propias";
+		}if(localStorage.conclu2==3){
+			document.getElementById("concl21").innerHTML="Hay contribución, pero confusa o basadas en definiciones  informales";
+		}if(localStorage.conclu2==4){
+			document.getElementById("concl21").innerHTML="La contribución está clara y correctamente relacionada con la literatura o lo discutido en clases";
+		}if(localStorage.conclu2==5){
+			document.getElementById("concl21").innerHTML="Hay contribuciones críticas y originales sustentadas en la literatura o lo discutido en clases";
+		}
+		
+		document.getElementById("concl3").innerHTML = localStorage.conclu3;
+		if(localStorage.conclu3==1){
+                document.getElementById("concl31").innerHTML="No se presentan conclusiones";
+            }
+            if(localStorage.conclu3==2){
+                document.getElementById("concl31").innerHTML="Las conclusiones no se relacionan con el objetivo del curso";
+            }
+            if(localStorage.conclu3==3){
+                document.getElementById("concl31").innerHTML="Se sugiere relevancia, pero sustentada en definiciones informales";
+            }
+            if(localStorage.conclu3==4){
+                document.getElementById("concl31").innerHTML="Las conclusiones son relevantes para el curso.";
+            }
+            if(localStorage.conclu3==5){
+                document.getElementById("concl31").innerHTML="Las conclusiones expanden el conocimiento presentado en el curso";
+            }
+		
+		document.getElementById("biblio1").innerHTML = localStorage.bibli1;
+		if(localStorage.bibli1==1){
+                document.getElementById("biblio11").innerHTML="No hay bibliografía";
+		}if(localStorage.bibli1==2){
+			document.getElementById("biblio11").innerHTML="La bibliografía está desordenada, faltan datos del material consultado y cuando están presentes, no respetan el formato requerido";
+		}if(localStorage.bibli1==3){
+			document.getElementById("biblio11").innerHTML="Se presentan algunos autores y material consultado y con errores de acuerdo al formato requerido";
+		}if(localStorage.bibli1==4){
+			document.getElementById("biblio11").innerHTML="La mayoría de los autores están incluidos, pero algunos datos están ausentes o no se presentan de acuerdo al formato requerido";
+		}if(localStorage.bibli1==5){
+			document.getElementById("biblio11").innerHTML="Toda la bibliografía se presenta por orden alfabético y de acuerdo al formato requerido";
+		}
+		
+		document.getElementById("biblio2").innerHTML = localStorage.bibli2;
+		if(localStorage.bibli2==1){
+			document.getElementById("biblio21").innerHTML="No hay citaciones";
+		}if(localStorage.bibli2==2){
+			document.getElementById("biblio21").innerHTML="Se cita material equivocado. Se atribuyen autores o fechas de publicaciones errados ";
+		}if(localStorage.bibli2==3){
+			document.getElementById("biblio21").innerHTML="Se cita a los autores y sus años de publicación en algunos casos, con errores de acuerdo con el formato requerido";
+		}if(localStorage.bibli2==4){
+			document.getElementById("biblio21").innerHTML="Se cita correctamente a autores y años de publicación en la mayoría de los casos";
+		}if(localStorage.bibli2==5){
+			document.getElementById("biblio21").innerHTML="En todo el texto se presentan las citas a los materiales consultados de acuerdo con el formato requerido";
+		}
+		
+		document.getElementById("aspec1").innerHTML = localStorage.aspecto1;
+		if(localStorage.aspecto1==1){
+			document.getElementById("aspec11").innerHTML="52-70+ faltas de ortografía acentual, literal o puntual.";
+		}if(localStorage.aspecto1==2){
+			document.getElementById("aspec11").innerHTML="25-52 faltas de ortografía acentual, literal o puntual.";
+		}if(localStorage.aspecto1==3){
+			document.getElementById("aspec11").innerHTML="18-35 faltas de ortografía acentual, literal o puntual.";
+		}if(localStorage.aspecto1==4){
+			document.getElementById("aspec11").innerHTML="1-17 faltas de ortografía acentual, literal o puntual.";
+		}if(localStorage.aspecto1==5){
+			document.getElementById("aspec11").innerHTML="0 faltas de ortografía acentual, literal o puntual.";
+		}
+		
+		document.getElementById("aspec2").innerHTML = localStorage.aspecto2;
+		if(localStorage.aspecto2==1){
+			document.getElementById("aspec21").innerHTML="Supera o no alcanza la extensión requerida.";
+		}if(localStorage.aspecto2==2){
+			document.getElementById("aspec21").innerHTML="";
+		}if(localStorage.aspecto2==3){
+			document.getElementById("aspec21").innerHTML="";
+		}if(localStorage.aspecto2==4){
+			document.getElementById("aspec21").innerHTML="";
+		}if(localStorage.aspecto2==5){
+			document.getElementById("aspec21").innerHTML="Dentro de la extensión requerida.";
+		}
+		
+		document.getElementById("punta1").innerHTML = localStorage.punta;
+		document.getElementById("NotaPar1").innerHTML = localStorage.notaPar;
+		document.getElementById("descuenRetra1").innerHTML = localStorage.descuRetraso;
+		document.getElementById("NotaEnsa1").innerHTML = localStorage.notaEnsayo;
+		document.getElementById("Coment1").innerHTML = "Comentario: "+localStorage.comenta;
+		
+		localStorage.clear()
+			
+	</script>
+</body>
+</html>
