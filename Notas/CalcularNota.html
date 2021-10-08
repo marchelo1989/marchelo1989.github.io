@@ -203,15 +203,22 @@
 		  var NotaEnsayo1 = Math.round(NotaEnsayo* 100) / 100
 		  
 		  const recorreArray2 = (arr,puntos) => {
-			  for(let i=0; i<=arr.length-1; i++){
-				  if(arr[i].puntoArr==puntos){
-					  document.getElementById("NotaEnsa").value = arr[i].notaArr;
-					  //console.log(arr[i].notaArr);
-				  }  
+			  if(puntos<0){
+				  document.getElementById("NotaEnsa").value = "0.0";
+			  }else{
+				  for(let i=0; i<=arr.length-1; i++){
+					  if(arr[i].puntoArr==puntos){
+						  document.getElementById("NotaEnsa").value = arr[i].notaArr;
+						  //console.log(arr[i].notaArr);
+					  }  
+				  }
 			  }
+			  
 			}
-		  recorreArray2(arrayPuntos,NotaEnsayo1);
-		  console.log (NotaEnsayo1);
+		  
+			recorreArray2(arrayPuntos,NotaEnsayo1);
+		  
+		  //console.log (NotaEnsayo1);
 	   	//document.writeln(puntaje1);
 	  }
 		function vista(){
@@ -242,9 +249,17 @@
 			localStorage.notaEnsayo = document.getElementById("NotaEnsa").value;
 			localStorage.comenta = document.getElementById("comentario").value;
 			
-			window.location.href='NotasPrueba.html';
+			window.location.href='VistaNotas.html';
+		}
+		function SoloNumero(elemento){
+			if(elemento.value>5){
+				elemento.value='5';
+			}else if(elemento.value<1){
+				elemento.value='1';
+			}
 		}
 	</script>
+	
 	<h1 align="center">Notas Ensayo</h1>
 	<caption>Datos del Alumno</caption>
 	
@@ -269,69 +284,69 @@
 		</tr>
 		<tr>
 			<td width="30%" >Planteo del problema</td>
-			<td width="10%" ><input type="number" id="intro1" onKeyUp="if(this.value>5){this.value='5';}else if(this.value<1){this.value='1';}"></td>
+			<td width="10%" ><input type="number" id="intro1" onKeyUp="SoloNumero(this)"></td>
 		</tr>
 		
 		<tr>
 			<td>Definición de términos relevantes</td>
-			<td><input type="number" id="intro2" ></td>
+			<td><input type="number" id="intro2" onKeyUp="SoloNumero(this)"></td>
 		</tr>
 		
 		<tr>
 			<td>Presentación de argumento central</td>
-			<td><input type="number" id="intro3" ></td>
+			<td><input type="number" id="intro3" onKeyUp="SoloNumero(this)"></td>
 		</tr>
 		<tr>
 			<th colspan="2">DESARROLLO (30%)</th>
 		</tr>
 		<tr>
 			<td>Estructura y orden en la presentación</td>
-			<td><input type="number" id="desa1" ></td>
+			<td><input type="number" id="desa1" onKeyUp="SoloNumero(this)"></td>
 		</tr>
 		<tr>
 			<td>Calidad de los análisis</td>
-			<td><input type="number" id="desa2" ></td>
+			<td><input type="number" id="desa2" onKeyUp="SoloNumero(this)"></td>
 		</tr>
 		<tr>
 			<td>Relación con argumento central</td>
-			<td><input type="number" id="desa3" ></td>
+			<td><input type="number" id="desa3" onKeyUp="SoloNumero(this)"></td>
 		</tr>
 		<tr>
 			<th colspan="2">CONCLUSIONES (20%)</th>
 		</tr>
 		<tr>
 			<td>Relación con el argumento inicial</td>
-			<td><input type="number" id="conc1" ></td>
+			<td><input type="number" id="conc1" onKeyUp="SoloNumero(this)"></td>
 		</tr>
 		<tr>
 			<td>Aportación personal</td>
-			<td><input type="number" id="conc2" ></td>
+			<td><input type="number" id="conc2" onKeyUp="SoloNumero(this)"></td>
 		</tr>
 		<tr>
 			<td>Relevancia para la discusión</td>
-			<td><input type="number" id="conc3" ></td>
+			<td><input type="number" id="conc3" onKeyUp="SoloNumero(this)"></td>
 		</tr>
 		<tr>
 			<th colspan="2">BIBLIOGRAFÍA (10%)</th>
 		</tr>
 		<tr>
 			<td>Bibliografía</td>
-			<td><input type="number" id="biblio1" ></td>
+			<td><input type="number" id="biblio1" onKeyUp="SoloNumero(this)"></td>
 		</tr>
 		<tr>
 			<td>Citas en texto</td>
-			<td><input type="number" id="biblio2" ></td>
+			<td><input type="number" id="biblio2" onKeyUp="SoloNumero(this)"></td>
 		</tr>
 		<tr>
 			<th colspan="2">ASPECTOS FORMALES (20%)</th>
 		</tr>
 		<tr>
 			<td>Ortografía</td>
-			<td><input type="number" id="aspec1" ></td>
+			<td><input type="number" id="aspec1" onKeyUp="SoloNumero(this)"></td>
 		</tr>
 		<tr>
 			<td>Extensión</td>
-			<td><input type="number" id="aspec2" ></td>
+			<td><input type="number" id="aspec2" onKeyUp="SoloNumero(this)"></td>
 		</tr>
 		<tr>
 			<th colspan="2"><button onclick="sumar()">Calular</button></th>
@@ -339,19 +354,19 @@
 		
 		<tr>
 			<td>Puntaje</td>
-			<td><input type="text" id="puntaje" ></td>
+			<td><input type="text" id="puntaje" readonly="readonly"></td>
 		</tr>
 		<tr>
 			<td>Nota Parcial</td>
-			<td><input type="text" id="NotaPa" ></td>
+			<td><input type="text" id="NotaPa" readonly="readonly"></td>
 		</tr>
 		<tr>
 			<td>Descuento por retraso</td>
-			<td><input type="text" id="descuRetra" ></td>
+			<td><input type="text" id="descuRetra" readonly="readonly"></td>
 		</tr>
 		<tr>
 			<td>Nota Ensayo</td>
-			<td><input type="text" id="NotaEnsa" ></td>
+			<td><input type="text" id="NotaEnsa" readonly="readonly" ></td>
 		</tr>
 		<tr>
 			<th colspan="2">Comentario:</th>
