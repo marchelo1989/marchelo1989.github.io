@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Informacion</title>
+	<script type="text/javascript">
+
+			function ejemplo()
+			{
+				document.write( "Informacion Navegador: <p />" );
+				document.write( "appCodeName: "   + navigator.appCodeName   + "<p />" );
+				document.write( "appName: "       + navigator.appName       + "<p />" );
+				document.write( "appVersion: "    + navigator.appVersion    + "<p />" );
+				document.write( "cookieEnabled: " + navigator.cookieEnabled + "<p />" );
+				document.write( "platform: "      + navigator.platform      + "<p />" );
+				document.write( "userAgent: "     + navigator.userAgent     + "<p />" );
+
+				document.write( "javaEnabled(): " + navigator.javaEnabled() + "<p />" );
+				
+				document.write( "Informacion Pantalla: <p />" );
+				document.write( "height: "      + screen.height      + "<br />" );
+				document.write( "availHeight: " + screen.availHeight + "<br />" );
+				document.write( "width: "       + screen.width       + "<br />" );
+				document.write( "availWidth"    + screen.availWidth  + "<br />" );
+				
+				
+				document.write( "<p />" );
+				document.write( "Acceder URL Actual: <p />" );
+				document.write( "hash: "	 + location.hash     + "<br />" );
+				document.write( "host: "	 + location.host     + "<br />" );
+				document.write( "hostname: " + location.hostname + "<br />" );
+				document.write( "href: "	 + location.href     + "<br />" );
+				document.write( "pathname: " + location.pathname + "<br />" );
+				document.write( "port: "	 + location.port     + "<br />" );
+				document.write( "protocol: " + location.protocol + "<br />" );
+				document.write( "search: "   + location.search   + "<p />" );
+
+				// Carga la URL en el navegador web:
+				//location.href = "http://www.aprender-informatica.com/";
+			}
+
+        </script>
+</head>
+
+<body onload="ejemplo();">
+	Curso de JavaScript
+</body>
+</html>

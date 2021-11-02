@@ -3,11 +3,28 @@
 <head>
 <meta charset="utf-8">
 <title>Notas</title>
-	
+	<script type="text/javascript">
+		function loginsession(){
+			var dato1 = sessionStorage.Usuario;
+			//var dato2 = sessionStorage.Clave;
+			var total = sessionStorage.length;
+			//alert(dato1);
+			if(dato1=="21232f297a57a5a743894a0e4a801fc3"){
+				
+			}else{
+				window.location.href='index.html';
+			}
+		}
+		window.onload = loginsession;
+	</script>
 </head>
 
-<body>
+<body >
 	<script>
+		function cerrar(){
+			sessionStorage.clear();
+			window.location.href='index.html';
+		}
 	  function sumar(){
 		  var introdu1 = document.getElementById("intro1").value;
 		  var introdu2 = document.getElementById("intro2").value;
@@ -261,6 +278,8 @@
 	</script>
 	
 	<h1 align="center">Notas Ensayo</h1>
+	
+	<h2><button onclick="cerrar()">Cerrar Sesion</button></h2>
 	<caption>Datos del Alumno</caption>
 	
 	<table border="0" WIDTH="500">
