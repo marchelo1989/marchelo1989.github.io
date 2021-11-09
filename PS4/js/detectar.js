@@ -68,6 +68,6 @@ function ps4chk(){
 }
 
 function disable_all(){
-	//window.location.href ="../Home/index.html";
-	window.location.href ="../Mantenedor/index.html";
+	window.location.href ="../Home/index.html";
+	//window.location.href ="../Mantenedor/index.html";
 }
