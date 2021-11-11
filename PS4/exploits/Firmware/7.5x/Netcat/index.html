@@ -1,0 +1,69 @@
+<html>
+
+<body onload="go()">
+    <style>
+    body{
+        background-color: black; 
+        color: white;
+    }
+    
+</style>
+<script>
+    if(document.cookie.indexOf('kex=0') >= 0)
+        window.location.href = document.referrer;
+</script>
+<script>
+function print(){}
+
+var scriptCode = '';
+
+function preloadScripts(lst)
+{
+    for(var i = 0; i < lst.length; i++)
+    {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', lst[i], false);
+        xhr.send('');
+        scriptCode += xhr.responseText + '\n';
+    }
+}
+
+function done()
+{
+    if(main_ret == 0 || main_ret == 179)
+    {
+        alert("You're all set!\n Payload Send !");
+        read_ptr_at(0);
+    }
+    else
+        alert("Jailbreak failed! Reboot your PS4 and try again.");
+}
+
+window.midExploit = function()
+{
+    //preloadScripts(['../blob.js', '../jb.js', 'netcat.js'], go);
+    preloadScripts(['../750.js', '../jb750/c-code.js','../mira750/c-code.js'], go);
+}
+
+window.postExploit = function()
+{
+    document.cookie = 'kex=0';
+    setTimeout(function() //update the screen one last time...
+    {
+        eval.call(window, scriptCode);
+        done();
+    }, 100);
+};
+</script>
+<script src="../utils.js"></script>
+<script src="../int64.js"></script>
+<script src="../ps4.js"></script>
+<button style="opacity: 0; position: absolute; bottom: 5%;" id="input1" onfocus="handle2()"></button>
+<button style="opacity: 0; position: absolute; bottom: 5%;" id="input2"></button>
+<button style="opacity: 0; position: absolute; bottom: 5%;" id="input3" onfocus="handle2()"></button>
+<select style="opacity: 0; position: absolute; bottom: 5%;" id="select1">
+<option style="opacity: 0;" value="value1">Value1</option>
+</select>
+
+</body>
+</html>

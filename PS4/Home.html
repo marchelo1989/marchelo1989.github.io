@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Home PS4</title>
+	<link rel="stylesheet" href="css/boton.css" />
+</head>
+
+<body style="background-color:#E1331D;">
+	<h1>Seleccione el Firewall</h1>
+	<h2 id="consola">Consola</h2>
+	<script type="text/javascript"> 
+		var plataforma = navigator.platform  ;
+		document.getElementById("consola").innerHTML = "Consola: "+plataforma;
+	</script>
+	<h2 id="fw"> con Firmware </h2>
+	<script type="text/javascript"> 
+		var ua = navigator.userAgent;
+		var fwVersion = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple"));
+		document.getElementById("fw").innerHTML = "Con Firmware: "+fwVersion;
+		//document.write(fwVersion);
+	</script>
+	<!--<h3>Exploits y Payloads</h3>-->
+	<div>
+			<!-- Botones Chicos -->
+		<a href="#" class="button blue ">
+			<span class="icon-house"></span>5.05
+		</a>
+		<a href="#" class="button blue ">
+			<span class="icon-house"></span>6.72
+		</a>
+		<a href="7.02/index.html" class="button blue ">
+			<span class="icon-house"></span>7.02
+		</a>
+		<a href="#" class="button blue ">
+			<span class="icon-house"></span>7.50
+		</a>
+		<a href="#" class="button blue ">
+			<span class="icon-house"></span>7.51
+		</a>
+		<a href="#" class="button blue ">
+			<span class="icon-house"></span>7.55
+		</a>
+		
+	</div>
+	
+	
+</body>
+</html>

@@ -12,21 +12,18 @@ function ps4chk(){
 					alert(msgCongrats);
 					window.location.href ="./PS4.html"
 //					initDEX();
-					//loadcex_484();
+					//5.05();
 					break;
 					
 				case fwCompat[1]:
 					alert(msgCongrats);
 					window.location.href ="./PS4.html"
 //					initDEX();
-					//loadcex_485();
+					//6.72();
 					break;
 					
 				case fwCompat[2]:
-					alert(msgCongrats);
-					window.location.href ="./PS4.html"
-//					initDEX();
-					//loadcex_486();
+					window.location.href ="./7.02/index.html"
 					break;
 					
 				case fwCompat[3]:
@@ -34,27 +31,27 @@ function ps4chk(){
 					//document.write( "Informacion Navegador:"+uaStringCheck+" <p />" );
 					window.location.href ="./PS4.html"
 //					initDEX();
-					//loadcex_487();
+					//7.50();
 					break;
 					
 				case fwCompat[4]:
 					alert(msgCongrats);
 					window.location.href ="./PS4.html"
 //					initDEX();
-					//loadcex_488();
+					//7.51();
 					break;
 					
 				case fwCompat[5]:
 					alert(msgCongrats);
 					window.location.href ="./PS4.html"
 //					initDEX();
-					//loadcex_488();
+					//7.55();
 					break;
 					
 				default:
 					alert('¡Tu PS4 no está en FW 5.05 - 6.72 - 7.02 - 7.50 - 7.51 - 7.55! Su versión actual de FW en ejecución es '+ fwVersion +', que no es compatible con PS4xploit. Todas las funciones han sido deshabilitadas. Tratar de no Actualizar su consola para poder desbloquearla mas adelante a nuevos xploit');
 					//document.write( "Informacion Navegador:"+uaStringCheck+" <p />" );
-					disable_all();
+					disable_PS4();
 					break;
 			}
 			break;
@@ -67,7 +64,9 @@ function ps4chk(){
 	}
 }
 
+function disable_PS4(){
+	window.location.href ="./Home.html";
+}
 function disable_all(){
 	window.location.href ="../Home/index.html";
-	//window.location.href ="../Mantenedor/index.html";
 }
