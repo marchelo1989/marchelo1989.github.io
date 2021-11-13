@@ -1,6 +1,6 @@
 /* exploits */
 function cargarGoldHENv11(){
-	document.getElementById("msj").innerHTML = "GoldHEN v1.1 para Firmware 7.02";
+	document.getElementById("msj").innerHTML = "GoldHEN v1.1 para Firmware 7.02 (FTP)";
 }
 function cargarMIRA(){
 	document.getElementById("msj").innerHTML = "MIRA para el firmware 7.02";
