@@ -1,15 +1,12 @@
 /* exploits */
-function cargarGoldHENv20(){
-	document.getElementById("msj").innerHTML = "GoldHEN v2.0 para Firmware 7.02";
-}
 function cargarGoldHENv11(){
-	document.getElementById("msj").innerHTML = "GoldHEN v1.1 para Firmware 7.02 (FTP)";
+	document.getElementById("msj").innerHTML = "GoldHEN v1.1 para Firmware 6.72 (FTP)";
 }
 function cargarMIRA(){
-	document.getElementById("msj").innerHTML = "MIRA para el firmware 7.02";
+	document.getElementById("msj").innerHTML = "MIRA para el firmware 6.72";
 }
 function cargarHEN(){
-	document.getElementById("msj").innerHTML = "HEN v2.1.3 para firmware 7.02";
+	document.getElementById("msj").innerHTML = "HEN v2.1.3 para firmware 6.72";
 }
 
 /* Payloads */
