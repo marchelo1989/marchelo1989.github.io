@@ -10,14 +10,14 @@ function ps4chk(){
 			switch (fwVersion) {
 				case fwCompat[0]:
 					alert(msgCongrats);
-					window.location.href ="./PS4.html"
+					window.location.href ="./5.05/index.html"
 //					initDEX();
 					//5.05();
 					break;
 					
 				case fwCompat[1]:
 					alert(msgCongrats);
-					window.location.href ="./PS4.html"
+					window.location.href ="./6.72/index.html"
 //					initDEX();
 					//6.72();
 					break;

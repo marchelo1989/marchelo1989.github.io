@@ -1,15 +1,12 @@
 /* exploits */
 function cargarGoldHENv11(){
-	document.getElementById("msj").innerHTML = "GoldHEN para Firmware 6.72";
+	document.getElementById("msj").innerHTML = "GoldHEN para Firmware 5.05";
 }
 function cargarMIRA(){
-	document.getElementById("msj").innerHTML = "MIRA para el firmware 6.72";
+	document.getElementById("msj").innerHTML = "MIRA+HEN para el firmware 5.05";
 }
 function cargarHEN(){
-	document.getElementById("msj").innerHTML = "HEN para firmware 6.72";
-}
-function cargarMiranoHB(){
-	document.getElementById("msj").innerHTML = "MiranoHB para firmware 6.72";
+	document.getElementById("msj").innerHTML = "HEN para firmware 5.05";
 }
 
 /* Payloads */
@@ -31,47 +28,32 @@ function cargarDisableUpdate(){
 function cargarEnableUpdate(){
 	document.getElementById("msj").innerHTML = "Habilitar actualizaciones del sistema";
 }
-function cargarHistoryBlocker(){
-	document.getElementById("msj").innerHTML = "Desactive el historial del navegador, solo mostrará las páginas de uso frecuente una vez que abra";
-}
-function cargarBinLoader(){
-	document.getElementById("msj").innerHTML = "Inyecte una carga útil utilizando la IP de la consola y el puerto 9020";
+function cargarOriginal(){
+	document.getElementById("msj").innerHTML = "Original para firmware 5.05";
 }
 function cargarLinux1GB(){
-	document.getElementById("msj").innerHTML = "Cargue Linux desde una unidad USB con 1 GB de VRAM";
+	document.getElementById("msj").innerHTML = "Cargue Linux desde una unidad USB";
 }
-function cargarLinux4GB(){
-	document.getElementById("msj").innerHTML = "Cargue Linux desde una unidad USB con 4 GB de VRAM";
+function cargarreactPSPlus(){
+	document.getElementById("msj").innerHTML = "reactPSPlus para firmware 5.05";
 }
 function cargarBinLoaderChendo(){
 	document.getElementById("msj").innerHTML = "De Chendo Chap Inyecte una carga útil utilizando la IP de la consola y el puerto 9020";
 }
 function cargarOrbisToolbox(){
-	document.getElementById("msj").innerHTML = "Orbis-Toolbox para firmware 6.72";
+	document.getElementById("msj").innerHTML = "Orbis-Toolbox para firmware 5.05";
+}
+function cargarcargarOrbisAFR(){
+	document.getElementById("msj").innerHTML = "OrbisAFR para firmware 5.05";
 }
 function cargarBackup(){
 	document.getElementById("msj").innerHTML = "Crea una copia de seguridad de la base de datos de la consola y su usuario en una unidad USB";
 }
-function cargarRestore(){
-	document.getElementById("msj").innerHTML = "Restaurar la copia de seguridad de la base de datos desde la unidad USB";
-}
-function cargarToDex(){
-	document.getElementById("msj").innerHTML = "Habilite algunas funciones de depuración disponibles en TestKit";
-}
-function cargarPs4Debug(){
-	document.getElementById("msj").innerHTML = "Active su cuenta de usuario sin conexión";
-}
 function cargarRIFRenamer(){
 	document.getElementById("msj").innerHTML = "Cambia el tipo de licencia de los juegos instalados de FALSO a GRATIS, úselo para resolver juegos que no funcionarán con la carga útil normal de HEN";
 }
-function cargarWebActivador(){
-	document.getElementById("msj").innerHTML = "Active su cuenta de usuario desde el navegador de la consola";
-}
-function cargarWebRTE(){
-	document.getElementById("msj").innerHTML = "Requerido para activar trucos a través del sitio web de PS4 Trainer";
-}
 function titulopag(){
-	document.getElementById("msj").innerHTML = "PS4 6.72 Host x MarcheBM";
+	document.getElementById("msj").innerHTML = "PS4 5.05 Host x MarcheBM";
 }
 function cargarAtras(){
 	document.getElementById("msj").innerHTML = "Regresar a la sección de firmware";
