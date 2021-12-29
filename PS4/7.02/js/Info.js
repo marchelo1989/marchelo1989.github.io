@@ -64,6 +64,9 @@ function cargarRIFRenamer(){
 function cargarWebActivador(){
 	document.getElementById("msj").innerHTML = "Active su cuenta de usuario desde el navegador de la consola";
 }
+function cargarOrbisToolbox(){
+	document.getElementById("msj").innerHTML = "Orbis ToolBox Alpha Build 1167";
+}
 function cargarWebRTE(){
 	document.getElementById("msj").innerHTML = "Requerido para activar trucos a través del sitio web de PS4 Trainer";
 }
