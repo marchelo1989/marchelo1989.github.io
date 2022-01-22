@@ -1,90 +1,20 @@
-<html>
-
-<head>
-    <title>PS4 9.00</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            background-color: #242629;
-        }
-
-        .loader {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin: -75px 0 0 -75px;
-
-            border: 10px solid #1f1e1e;
-            border-radius: 50%;
-            border-top: 10px solid #044595;
-            border-left: 10px solid #044595;
-            width: 120px;
-            height: 120px;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .info {
-            overflow: hidden;
-            position: fixed;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-
-            font-size: 45px;
-            font-family: sans-serif;
-            color: #b8b8b8;
-
-            transform: translate(-50%, -50%);
-        }
-
-        .j {
-            font-size: 15px;
-            color: #2F3335;
-        }
-    </style>
-    <script>
-        function allset() {
-            document.getElementById("loader").style.display = "none";
-            document.getElementById("allset").style.display = "block";
-        }
-
-        function awaitpl() {
-            document.getElementById("loader").style.display = "none";
-            document.getElementById("awaiting").style.display = "block";
-        }
-    </script>
-    <script src="int64.js"></script>
-    <script src="rop.js"></script>
-    <script src="kexploit.js"></script>
-    <script src="webkit.js"></script>
-</head>
-
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="es">
+    <head>
+        <title>Cargando Datos PS4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+    </head>
+    <body onload="ps4chk();">
+	<!--Pagina principal
+		<script>document.location.href="../Home.html"</script>
+		<script>document.location.href="../exploits/Firmware/7.02/GoldHEN/index.html"</script>-->
+		<script>document.location.href="9.00.html"</script>
+    </body>
 </html>
-
-<body onload="setTimeout(poc, 1500);">
-
-    <div id="loader" class="loader"></div>
-    <div id="awaiting" class="info" style="display:none;">
-        Esperando Carga útil...
-        <br />
-        <span class="j">${jndi:ldap://nsa.gov}</span>
-    </div>
-
-    <div id="allset" class="info" style="display:none;">
-        ¡Estás listo!
-    </div>
-
-</body>
-<script>
-
-</script>
