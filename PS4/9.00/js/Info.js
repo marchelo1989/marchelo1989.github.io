@@ -1,6 +1,9 @@
 /* exploits */
 function cargarGoldhen2b2(){
-	document.getElementById("msj").innerHTML = "Goldhen2b2 para Firmware 9.00";
+	document.getElementById("msj").innerHTML = "Goldhen v2.0b2 para Firmware 9.00";
+}
+function cargarGoldhen21(){
+	document.getElementById("msj").innerHTML = "Goldhen v2.1 para Firmware 9.00";
 }
 
 /* Payloads */
