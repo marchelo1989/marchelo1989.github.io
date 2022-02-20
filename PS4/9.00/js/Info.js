@@ -8,6 +8,9 @@ function cargarGoldhen21(){
 function cargarGoldhen211(){
 	document.getElementById("msj").innerHTML = "Goldhen v2.1.1 para Firmware 9.00";
 }
+function cargarGoldhen212(){
+	document.getElementById("msj").innerHTML = "Goldhen v2.1.2 para Firmware 9.00";
+}
 
 /* Payloads */
 function cargarFTP(){
