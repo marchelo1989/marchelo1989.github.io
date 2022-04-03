@@ -49,7 +49,7 @@ function ps3chk(){
 				default:
 					alert('¡Tu PS3 no está en FW 4.84 - 4.88! Su versión actual de FW en ejecución es '+ fwVersion +', que no es compatible con ps3hen 1.0. Todas las funciones han sido deshabilitadas.');
 					//document.write( "Informacion Navegador:"+uaStringCheck+" <p />" );
-					disable_all();
+					disable_PS3();
 					break;
 			}
 			break;
@@ -61,7 +61,9 @@ function ps3chk(){
 			break;
 	}
 }
-
+function disable_PS3(){
+	window.location.href ="./Home.html";
+}
 function disable_all(){
 	window.location.href ="../Home/index.html";
 	//window.location.href ="../Mantenedor/index.html";
