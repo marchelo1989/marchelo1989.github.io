@@ -5,20 +5,20 @@ function ps3chk(){
 	var ua = navigator.userAgent;
 	var uaStringCheck = ua.substring(ua.indexOf("5.0 (") + 5, ua.indexOf(") Apple") - 7);
 	var fwVersion = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple"));
-	var msgHFW = "¡ATENCIÓN! \ N \ nLa versión de firmware requiere la instalación de 4.84 - 4.88 HFW (firmware híbrido), que contiene módulos explotables.";
+	var msgHFW = "¡ATENCIÓN! \ N \ nLa versión de firmware requiere la instalación de 4.87 - 4.88 HFW (firmware híbrido), que contiene módulos explotables.";
 	var msgCongrats = "¡Felicidades! Hemos detectado que tu PlayStation 3 está ejecutando FW "+ fwVersion +", que es compatible con ps3hen. ¡Disfrutar!";
 	switch (uaStringCheck) {
 		case "PLAYSTATION":
 			switch (fwVersion) {
 				case fwCompat[26]:
-					alert(msgCongrats);
+					alert(msgHFW);
 					window.location.href ="./PS3.html"
 //					initDEX();
 					//loadcex_484();
 					break;
 					
 				case fwCompat[27]:
-					alert(msgCongrats);
+					alert(msgHFW);
 					window.location.href ="./PS3.html"
 //					initDEX();
 					//loadcex_485();
@@ -32,7 +32,7 @@ function ps3chk(){
 					break;
 					
 				case fwCompat[29]:
-					alert(msgCongrats);
+					//alert(msgCongrats);
 					//document.write( "Informacion Navegador:"+uaStringCheck+" <p />" );
 					window.location.href ="./PS3.html"
 //					initDEX();
@@ -40,7 +40,7 @@ function ps3chk(){
 					break;
 					
 				case fwCompat[30]:
-					alert(msgCongrats);
+					//alert(msgCongrats);
 					window.location.href ="./PS3.html"
 //					initDEX();
 					//loadcex_488();
@@ -68,3 +68,18 @@ function disable_all(){
 	window.location.href ="../Home/index.html";
 	//window.location.href ="../Mantenedor/index.html";
 }
+
+function sistemaPS3(){
+  var plataforma = navigator.platform  ;
+    document.getElementById("PS3").innerHTML = plataforma;
+}
+function firmware(){
+    var ua = navigator.userAgent;
+	var fwVersion = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple"));
+	document.getElementById("fmware").innerHTML = fwVersion;
+}
+function ejecutar(){
+        sistemaPS3();
+        firmware();
+}
+window.onload = ejecutar;

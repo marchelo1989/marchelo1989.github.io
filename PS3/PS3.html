@@ -3,33 +3,56 @@
 <head>
 <meta charset="utf-8">
 <title>PS3 HEN</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+    <script src="js/detectar.js"></script>
 </head>
 
-<body>
-	<p>Consola PS3 Detectada</p>
-	<a>Estamos trabajando para su </a>
-	<script type="text/javascript">
-		document.write(navigator.platform);
-	</script>
-	<a> con Firmware </a>
-	<script type="text/javascript">
-		var ua = navigator.userAgent;
-		var fwVersion = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple"));
-		document.write(fwVersion);
-	</script><a> que es compatible con HEN</a>
-    
-    <h1>Activar PS3Xploit por primera vez en muestra consola PS3 HEN 4.87</h1>
-    <a href="487/auto/index.html">Hen Automático en Español</a>
-    <a href="487/alternate/index.html">Hen Alternate en Español</a>
-    <h1>Activar PS3Xploit por primera vez en muestra consola PS3 HEN 4.88</h1>
-    <a href="488/index.html">Hen Alternate en Español</a>
-    <a href="488/auto/index.html">Hen Automático en Español</a>
-	<h1>Bluethoot / USB Game Audio (PS3 HEN) </h1>
-    <p>Esto habilita que puedas emparejar / conectar dispositivos por Bluetooth y USB como audifonos y Micrófonos</p>
-    <a href="BTGA-303-488/index.html">Bluethoot / USB -303-488/</a>
-	
-    
-    <h2>Nuestra Pagina Web</h2>
+<body class="bg">
+    <div class="container" id="main" role="main">
+        <ul class="menu">
+            <li><a href="#s1">PS3 HEN 4.87</a>
+                <ul class="submenu">
+                    <li><a href="487/alternate/index.html">Hen Alternate Esp</a></li>
+                </ul>
+            </li>
+            <li><a href="#s1">PS3 HEN 4.88</a>
+                <ul class="submenu">
+                    <li><a href="488/HEN/hen.html">AUTO HEN INSTALLER v1.0</a></li>
+                    <li><a href="488/auto/index.html">Hen Automático Esp v2.0</a></li>
+                    <li><a href="488/index.html">Hen Alternate Esp</a></li>
+                </ul>
+            </li>
+            <li><a href="#s2">CFW 4.88 EVILNAT</a>
+                <ul class="submenu">
+                    <li><a href="https://www.ps3xploit.net/bgtoolset/">BG TOOLSET CFW</a></li>
+                </ul>
+            </li>
+            <li><a href="#s2">APLICACIONES</a>
+                <ul class="submenu">
+                    <li><a href="#">MULTIMAN</a></li>
+                    <!--<li><a href="https://archive.org/download/videostore/multiMAN%204.82.00%20HEN.pkg">MULTIMAN</a></li>
+                    <li><a href="https://github.com/Videogamesscz/videostore/raw/main/homebrew/pkgi%201.2.0.pkg">PKGI</a></li>
+                    <li><a href="https://archive.org/download/videostore/VIDEOSTORE%202.2.pkg">VIDEOSTORE 2.2</a></li>
+                    <li><a href="https://github.com/aldostools/webMAN-MOD/releases/download/1.47.37/webMAN_MOD_1.47.37_Installer.pkg">WEBMAN MOD</a></li>-->
+                </ul>
+            </li>
+            <li><a href="#s2">UTILIDADES</a>
+                <ul class="submenu">
+                    <li><a href="BTGA-303-488/index.html">Bluethoot / USB 303-488</a></li>
+                    <!--<li><a href="https://archive.org/download/videostore/C00%20UNLOCK.pkg">C00 UNLOCKER</a></li>
+                    <li><a href="https://archive.org/download/videostore/RAP%20PS2.pkg">RAP UNIVERSAL PS2</a></li>
+                    <li><a href="https://archive.org/download/videostore/15.280_Licencias.pkg">15.280 RAPS PS3 PSN</a></li>-->
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <p style="color:#FF0000">Consola PS3 Detectada</p>
+        <a style="color:#FF0000">Estamos trabajando para su <b id="PS3">PS3</b></a>
+        <a style="color:#FF0000"> con Firmware <b id="fmware">FV</b> que es compatible con HEN</a>
+    </div>
+    <h2 style="color:#FF0000">Nuestra Pagina Web</h2>
+    <h3 style="color:#FF0000">Para mas informacions</h3>
     <div id="qrcode">
         <img src="https://www.codigos-qr.com/qr/php/qr_img.php?d=https%3A%2F%2Fmarchelo1989.github.io%2F&s=4&e=m" alt="Generador de Códigos QR Codes"/>
     </div>
