@@ -33,7 +33,8 @@ html {
 
     border-bottom: 2px solid #a8d93f;
     border-top: 2px solid #a8d93f;
-    min-width: 160px;
+    /*min-width: 160px;*/
+    min-width: 250px;
 }
 .menu > li {
     display: block;
@@ -48,9 +49,10 @@ html {
     color: #ffffff;
     display: block;
     font-family: 'Lucida Console';
-    font-size: 18px;
+    /*font-size: 18px;*/
+    font-size: 15px;
     line-height: 54px;
-    padding: 0 25px;
+    padding: 0 29px;
     text-decoration: none;
     text-transform: uppercase;
 }
