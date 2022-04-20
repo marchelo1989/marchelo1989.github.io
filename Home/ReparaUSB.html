@@ -1,0 +1,421 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Reparar USB</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="css/estiloModal.css" />
+        <!-- Icono de la pagina WEB -->
+		<link rel="shortcut icon" href="ico/favicon.png" />
+        <script src="js/modal.js"></script>
+        
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+								<a href="index.html" class="logo"><strong>MarcheBMPC</strong> por Marcelo Burgos </a>
+								<ul class="icons">
+									<li><a href="https://twitter.com/marchelo_bm" class="icon brands fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/marcelo.bm" class="icon brands fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/marchelo.bm" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+									<li><a href="https://wa.me/message/ZWPJK3PZT3QQJ1" class="icon brands fa-whatsapp" target="_blank"><span class="label">Whatsapp</span></a></li>
+									<li><a href="https://m.me/marcelo.bm" class="icon brands fa-facebook-messenger" target="_blank"><span class="label">Messenger</span></a></li>
+									<li><a href="https://github.com/marchelo1989" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
+									<li><a href="https://t.me/MarcheloBM" class="icon brands fa-telegram" target="_blank"><span class="label">Telegram</span></a></li>
+								</ul>
+							</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Reparar Memorias USB</h1>
+                                        <h2>Protegidas por Escritura</h2>
+									</header>
+                                    
+                                    <div class="posts">
+										<article>
+											<a href="#" class="image"><img src="images/ReparacionUSB/CMDWindows.jpg" alt="" /></a>
+											<h3>Reparar desde Windows 10</h3>
+											<p>Método por la consola de comando del sistema CMD comandos para reparar nuestra unidad USB</p>
+											<ul class="actions">
+												<li><a href="ReparaUSB.html#win" class="button">Más</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/ReparacionUSB/Lunux.jpg" alt="" /></a>
+											<h3>Reparar desde Linux</h3>
+											<p>Método a través de la terminal de Linux comandos para reparar nuestra unidad USB</p>
+											<ul class="actions">
+												<li><a href="ReparaUSB.html#linux" class="button">Más</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/ReparacionUSB/ProgramasUSB.jpg" alt="" /></a>
+											<h3>Reparar desde Programas</h3>
+											<p>Método a través de programas para Windows uso más rápido, pero quizás no muy eficaz para nuestra unidad USB</p>
+											<ul class="actions">
+												<li><a href="ReparaUSB.html#pro" class="button">Más</a></li>
+											</ul>
+										</article>
+									</div>
+                                    
+                                    <h2>Método por Windows</h2>
+                                    <a name="win" id="win"></a>
+                                    <div class="row">
+                                        <div class="col-6 col-12-small">
+                                            <h3>A través de diskpart</h3>
+                                            <ol>
+                                                <li>A veces DISKPART, la utilidad de discos de Windows, puede ser de gran utilidad cuando tenemos problemas con discos y particiones. Lanzamos la consola de Windows buscando cmd, o desde ejecutar: cmd</li>
+                                                <li>Ya en la consola, para comenzar a usar DISKPART tecleamos:</li>
+                                                <code>diskpart</code>
+                                                <li>A continuación listamos los discos disponibles con:</li>
+                                                <code>list disk</code>
+                                                <li>seleccionamos el número del USB o el disco duro que esta protegido contra escritura:</li>
+                                                <code>select disk X</code>
+                                                <li>Y borramos los atributos de solo lectura con el comando: attributes disk clear readonly:</li>
+                                                <code>attributes disk clear readonly</code>
+                                                <span class="image fit"><img src="images/ReparacionUSB/DiskPart1.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                <li>A continuación podríamos crear una nueva partición y formatearla con:</li>
+                                                <ul>
+                                                    <li><code>create partition primary</code></li>
+                                                    <li><code>list partition</code></li>
+                                                    <li><code>select partition 1</code></li>
+                                                    <li><code>format fs=FAT32</code></li>
+                                                </ul>
+                                                <li>Le asignamos una letra a la nueva partición:</li>
+                                                <code>assign</code>
+                                                <span class="image fit"><img src="images/ReparacionUSB/DiskPart2.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                            </ol>
+                                        </div>
+                                        
+                                        <div class="col-6 col-12-small">
+                                            <h3>A través de chkdsk</h3>
+                                            <ol>
+                                                <li>La herramienta chkdsk de Windows (comprobador de discos de Windows)  puede ayudarnos en muchas ocasiones cuando hay errores en archivos o el sistema de ficheros de los discos o de una memoria USB.</li>
+                                                <li>Abrimos de nuevo la consola CMD (símbolo del sistema), y usando la letra adecuada del dispositivo, programamos un chkdsk para que se ejecute al reinicio del sistema, para ver si así podemos desbloquear nuestra unidad USB de solo lectura:</li>
+                                                <code>chkdsk /f /r</code>
+                                                <li>También podemos intentar forzar el desmontaje para ejecutarlo sin tener que reiniciar el equipo.</li>
+                                                <span class="image fit"><img src="images/ReparacionUSB/chkdsk1.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    <!--
+									
+                                    -->
+									<hr class="major" />
+                                    
+                                    <h2>Método por Linux</h2>
+                                    <a name="linux" id="linux"></a>
+                                    <div class="row">
+                                        <div class="col-6 col-12-small">
+                                            <h3>Desactivar la protección contra escritura con HDPARM</h3>
+                                            <p>HDPARM en Linux permite quitar el bit de protección de escritura. Se trata de un bit que podemos configurar para evitar que un USB sea reescrito con otros datos, y puede ser que en ocasiones el USB esté bloqueado porque dicho bit está activado.</p>
+                                            <ol>
+                                                <li>Vamos a desactivarlo con hdparm. Lo primero tendremos que tener algún equipo con Linux.</li>
+                                                <li>Mostramos la configuración del disco:</li>
+                                                <code>sudo hdparm /dev/sdd</code>
+                                                <li>Mostramos la identificación del disco:</li>
+                                                <code>sudo hdparm -i /dev/sdd</code>
+                                                <li>Consultamos el estado del bit de protección:</li>
+                                                <code>sudo hdparm -r /dev/sdd</code>
+                                                <li>y finalmente desactivamos el bit de protección:</li>
+                                                <code>sudo hdparm -r0 /dev/sdd</code>
+                                                <li>Y aquí podemos ver cómo hemos quitado el bit de protección al pendrive usb, y después ya aparece el bit de protección desactivado:</li>
+                                                <span class="image fit"><img src="images/ReparacionUSB/HDPARM.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                            </ol>
+                                            
+                                            <h3>Con Gparted</h3>
+                                            <p>GParted es un editor de particiones para el entorno de escritorio GNOME. Esta aplicación es usada para crear, eliminar, redimensionar, inspeccionar y copiar particiones, como también los sistemas de archivos que se encuentran en ellas.</p>
+                                            <ol>
+                                                <li>Conectamos el USB</li>
+                                                <li>Usamos HDPARM y el método previamente descrito, para revisar y desactivar el bit de protección si fuera necesario, antes de comenzar a eliminar la partición con Gparted.</li>
+                                                <li>Lo desmontamos si se ha automontado, para poder trabajar con él</li>
+                                                <li>Intentamos eliminar la partición</li>
+                                                <span class="image fit"><img src="images/ReparacionUSB/Gparted1.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                <li>Gparted nos pregunta antes de plicar los cambios pendientes: “¿está seguro de querer aplicar todas las operaciones pendientes?“</li>
+                                                <span class="image fit"><img src="images/ReparacionUSB/Gparted2.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                <li>Realizando operaciones pendientes: eliminando partición</li>
+                                                <span class="image fit"><img src="images/ReparacionUSB/Gparted3.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                <li>Y vemos que finalmente se ha eliminado la partición</li>
+                                                <span class="image fit"><img src="images/ReparacionUSB/Gparted4.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                <li>Ahora ya podríamos formatear la partición desde Gparted o formatear desde la terminal de Linux con mkfs.</li>
+                                            </ol>
+                                            
+                                            <h3>con fsck</h3>
+                                            <p>fsck comprueba y repara sistemas de ficheros Linux, y no permite analizar ntfs, pero sí FAT. Para reparar NTFS ya tenemos ntfsfix.</p>
+                                            <ol>
+                                                <li>Al usar fsck podremos elegir el tipo de sistema de ficheros que vamos a analizar. Podemos encontrar las diversas opciones de formatos que permite analizar listando el directorio /sbin/fsck :</li>
+                                                <span class="image fit"><img src="images/ReparacionUSB/fsck1.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                <li>ejecutamos una comprobación y reparación de sistema de ficheros FAT con:</li>
+                                                <code>fsck.fat -r -V /dev/sdb1</code>
+                                                <li>o</li>
+                                                <code>fsck.vfat -r -V /dev/sdb1</code>
+                                                <li>las opciones utilizadas son:</li>
+                                                <ul>
+                                                    <li>-r: muestra estadísticas.</li>
+                                                    <li>-V (en mayúscula) :  muestra lo que va haciendo</li>
+                                                    <span class="image fit"><img src="images/ReparacionUSB/fsck2.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                </ul>
+                                                <li>Examinando y reparando ext4 con fsck:</li>
+                                                <li>con</li>
+                                                <code>sudo fsck.ext4 -r -V /dev/sdb1</code>
+                                                <span class="image fit"><img src="images/ReparacionUSB/fsck3.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                            </ol>
+                                            
+                                            <h3>con e2fsck</h3>
+                                            <p>e2fsck es otra interesante utilidad de linux para examinar sistemas de ficheros Linux: ext2/ext3/ext4</p>
+                                            <ol>
+                                                <li>Opciones interesantes de e2fsck:</li>
+                                                <ul>
+                                                    <li>-p : Realiza la reparación de forma automática..</li>
+                                                    <li>-c : busca los bloques dañados y los agrega a la lista de bloques dañados.</li>
+                                                    <li>-f: Fuerza la revisión.</li>
+                                                    <li>-v : Genera mensajes de diagnóstico.</li>
+                                                </ul>
+                                                <li>Realizamos un escaneo y reparación del sistema de ficheros ext4 de un usb con e2fsck:</li>
+                                                <code>e2fsck -p -f -v /dev/sdb1</code>
+                                                <span class="image fit"><img src="images/ReparacionUSB/e2fsck.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                            </ol>
+                                            
+                                        </div>
+                                        
+                                        <div class="col-6 col-12-small">
+                                            <h3>Con TestDisk</h3>
+                                            <p>Testdisk es una interesante utilidad de software para recuperación de datos (permite recuperar particiones perdidas y hacerlas bootables otra vez) que podemos encontrar en Linux, pero además en algún pack de Herramientas como Hiren´s Boot, Si utilizamos Hiren´s Boot, deberemos grabar una imagen ISO de la distribución en un USB, y arrancar con él desde el equipo,y también podemos utilizarlo directamente en cualquier distro Linux.</p>
+                                            <ol>
+                                                <li>Instalaremos testdisk en Ubuntu con:</li>
+                                                <code>sudo apt-get install testdisk</code>
+                                                <li>y en CentOS con:</li>
+                                                <code>yum install testdisk</code>
+                                                <li>Abrimos pues una terminal y comenzamos con Testdisk. Testdisk escaneará nuestros discos y dispositivos de almacenamiento conectados, y mostrará una lista con todos ellos:</li>
+                                                <span class="image fit"><img src="images/ReparacionUSB/testdisk1.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                <li>Seleccionamos el disco sobre el que queremos trabajar, en este caso se trata del USB protegido contra escritura que intentamos recuperar; Y tendremos que seleccionar qué tipo de tabla de particiones contiene. Mayoritariamente usaremos la opción Intel, a no ser que se trate de un disco con formato de Mac, Sun … u otros tipos de particiones menos utilizadas.</li>
+                                                <li>Seleccionamos Tipo partición Intel</li>
+                                                <span class="image fit"><img src="images/ReparacionUSB/testdisk2.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                <li>A continuación Testdisk nos mostrará las opciones disponibles que podemos ejecutar en este disco o USB:</li>
+                                                <ul>
+                                                    <li>Analizar el disco y las particiones contenidas en él, para buscar particiones perdidas.</li>
+                                                    <li>Opciones avanzadas: Herramientas del sistema de archivos.</li>
+                                                    <li>Geometría: Cambiar la geometría del disco.</li>
+                                                    <li>Opciones: Opciones de modificación</li>
+                                                    <li>MBR: Escribir el código MBR en la tabla de particiones.</li>
+                                                    <li>Borrar: Eliminar todos los datos de la tabla de particiones.</li>
+                                                    <li>Salir</li>
+                                                    <span class="image fit"><img src="images/ReparacionUSB/testdisk3.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                </ul>
+                                                <li>Normalmente nos interesará intentar primero a recuperar las particiones, así que usaremos la opción Analizar, y si encuentra particiones intentaremos recuperarlas.</li>
+                                                <li>Pero si ya hemos dado los datos por perdidos o no son importantes, y lo único que queremos es recuperar el disco o pendrive USB, usaremos la opción Delete (Eliminar), para eliminar la tabla de particiones :</li>
+                                                <code>Clear MBR partition table by writing zero bytes to it?</code>
+                                                <span class="image fit"><img src="images/ReparacionUSB/testdisk4.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                <li>Con un poco de suerte, tras borrar el MBR del disco o USB y todas las particiones existentes, podremos volver a crear particiones en él.  Tenemos varias formas de particionar el disco:</li>
+                                                <code>codigo</code>
+                                                <span class="image fit"><img src="#" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                            </ol>
+                                            
+                                            <h3>con ntfsfix</h3>
+                                            <p>ntfsfix permite reparar errores en el formato de ficheros tipo ntfs.</p>
+                                            <ol>
+                                                <li>Nos aseguraremos de que tenemos instalado el paquete ntfs-3g.</li>
+                                                <li>Si es necesario lo instalamos:</li>
+                                                <code>apt-get install ntfs-3g</code>
+                                                <li>Opciones de ntfsfix :</li>
+                                                <ul>
+                                                    <li>-b : limpia la lista de sectores dañados</li>
+                                                    <li>-d : elimina el “dirty bit” .  El “dirty bit” es un bit que en ocasiones Windows coloca en el sistema de ficheros ntfs, puede ser porque quedan actualizaciones pendientes, hay un reinicio pendiente, hay una programación de chkdsk pendiente, o se ha detectado datos corruptos.</li>
+                                                    <span class="image fit"><img src="images/ReparacionUSB/ntfsfix1.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                </ul>
+                                                <li>lanzamos ntfsfix:</li>
+                                                <code>ntfsfix /dev/sdb1</code>
+                                                <li>o</li>
+                                                <code>ntfsfix -d -b /deb/sdb1</code>
+                                                <span class="image fit"><img src="images/ReparacionUSB/ntfsfix2.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                <li>Después de ejecutar ntfsfix podemos montar la partición :</li>
+                                                <code>mount -t ntfs-3g /dev/sdb /mnt/</code>
+                                                <li>Los siguientes comandos serán de utilidad en sistemas de ficheros Linux.</li>
+                                            </ol>
+                                            
+                                            <h3>con dosfsck</h3>
+                                            <p>dosfsck chequea y repara sistemas de ficheros de dos. osfsck no funciona con ntfs, solo con FAT.</p>
+                                            <ol>
+                                                <li>requiere que instalemos previamente el paquete dosfstools :</li>
+                                                <code>sudo apt-get install dosfstools</code>
+                                                <li>Opciones interesantes al realizar un chequeo con dosfsck:</li>
+                                                <ul>
+                                                    <li>-t : realiza test buscando clusteres dañados en el disco.</li>
+                                                    <li>-a : automaticamente repara el sistema de ficheros</li>
+                                                    <li>-w : escribe los cambios al disco</li>
+                                                </ul>
+                                                <li>ejecutamos un test con dosfsck en el disco bloqueado:</li>
+                                                <code>sudo dosfsck -t -a -w /dev/sdb1</code>
+                                                <span class="image fit"><img src="images/ReparacionUSB/dosfsck.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                            </ol>
+                                            
+                                            <h3>Formatear a bajo nivel en Linux con dd</h3>
+                                            <p>dd es una de las navajas suizas de Linux, y es que dd significa “data duplicator” (duplicador de datos), aunque en broma también se le conoce como “destructor de datos“, ya que es una herramienta muy poderosa. A este último nombre haremos honor, utilizándolo para formatear el disco, llenándolo de “zeros” (machacando toda la información, borrando el disco). </p>
+                                            <ol>
+                                                <li>Cuidado al aplicar este comando. Asegúrate muy bien del dispositivo que vas a borrar.</li>
+                                                <li>Básicamente, la sintaxis del comando dd es:</li>
+                                                <code>dd if=entrada_de_datos of=salida_de_datos</code>
+                                                <li>o sea, que elegimos los datos que van a entrar y dónde van a salir. Algo así como copiar “tal cosa” “aquí“.</li>
+                                                <li>Así que aplicado a nuestro caso, vamos a rellenar el disco problemático con zeros, machacando todo el disco, así:</li>
+                                                <code>dd if=/dev/zero of=/dev/sdb</code>
+                                                <li>en este caso el dispositivo de salida, adonde van los zeros que copiamos, es /dev/sdb.  Cuidado y coloca ahí tu dispositivo correcto.</li>
+                                                <span class="image fit"><img src="images/ReparacionUSB/dd.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                <li>De esta forma hemos machacado todo el contenido del disco problemático, y ahora podremos comenzar a crear particiones y formatear para usarlo con normalidad.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+
+									<hr class="major" />
+                                    
+                                    <h2>Método por Programas Windows</h2>
+                                    <a name="pro" id="pro"></a>
+                                    <div class="row">
+                                        <div class="col-6 col-12-small">
+                                            <h3>Formateando con HDD Low Level Format Tool</h3>
+                                            <p>Realizamos un formateo a bajo nivel con la herramienta HDD Low Level Format Tool.</p>
+                                            <ol>
+                                                <li>Lo formatea en FAT 32.</li>
+                                                <span class="image fit"><img src="images/ReparacionUSB/HDDLowLevelFormatTool1.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                <span class="image fit"><img src="images/ReparacionUSB/HDDLowLevelFormatTool2.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                <li>Después, cuando Windows lo detecte, y el disco esté desbloqueado, podemos formatearlo como NTFS para nuestra comodidad.</li>
+                                                <span class="image fit"><img src="images/ReparacionUSB/HDDLowLevelFormatTool3.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                            </ol>
+                                            <div class="table-wrapper">
+												<table>
+													<thead>
+														<tr>
+															<th>Archivos</th>
+															<th colspan="3">Servidores</th>
+														</tr>
+													</thead>
+													<tfoot>
+														<tr>
+															<td>HDD Low Level Format Tool</td>
+                                                            <!--<a name="KMS" id="KMS"></a>-->
+															<td><a href="https://mega.nz/folder/fRBh3L4R#6nFtCLJao9UaM3g-KSEsqw" target="_blank">Mega</a></td>
+                                                            <!--<td><a href="#" target="_blank">Mediafire</a></td>
+                                                            <td><a href="#" target="_blank">Zippyshare</a></td>-->
+															<td><a href="https://home.mycloud.com/action/share/edb18533-2bcf-4864-906c-c5acd3eaa273" target="_blank">Nube</a></td>
+                                                            <td><a href="https://hddguru.com/software/HDD-LLF-Low-Level-Format-Tool/" target="_blank">WEB Oficial</a></td>
+														</tr>
+													</tfoot>
+												</table>
+											</div>
+                                        </div>
+                                        
+                                        <div class="col-6 col-12-small">
+                                            <h3>USB WRITE PROTECTOR</h3>
+                                            <p>USB Write Protector es una herramienta que permite desactivar la protección contra escritura de todos los dispositivos USB conectados al equipo. PASOS A REALIZAR PARA UTILIZAR USB WRITE PROTECTOR:</p>
+                                            <ol>
+                                                <li>Extraemos con seguridad el USB (pero lo dejamos conectado).</li>
+                                                <li>Ejecutamos USB Write protector, con la opción : USB Protection OFF</li>
+                                                <span class="image fit"><img src="images/ReparacionUSB/USBWRITEPROTECTOR1.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                <li>Introducimos el USB de nuevo.</li>
+                                                <li>Y podremos formatear!  (aunque solo con formato exFAT)</li>
+                                                <span class="image fit"><img src="images/ReparacionUSB/USBWRITEPROTECTOR2.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span>
+                                                <li>USB Write Protector puede ser una interesante solución ante el problema de un disco extraíble protegido contra escritura en Windows.</li>
+                                            </ol>
+                                            <div class="table-wrapper">
+												<table>
+													<thead>
+														<tr>
+															<th>Archivos</th>
+															<th colspan="2">Servidores</th>
+														</tr>
+													</thead>
+													<tfoot>
+														<tr>
+															<td>USB WRITE PROTECTOR</td>
+															<td><a href="https://mega.nz/folder/GZwT0AyK#NOJoFgL0YrOp_-HdvBuD8Q" target="_blank">Mega</a></td>
+                                                            <!--<td><a href="#" target="_blank">Mediafire</a></td>
+                                                            <td><a href="#" target="_blank">Zippyshare</a></td>-->
+															<td><a href="https://home.mycloud.com/action/share/e2980be3-9839-4f76-bf05-ed3dea1fae62" target="_blank">Nube</a></td>
+														</tr>
+													</tfoot>
+												</table>
+											</div>
+                                        </div>
+                                    </div>
+
+									<hr class="major" />
+
+								</section>
+                            <div id="modal01" class="modal" onclick="this.style.display='none'">
+                              <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                              <div class="modal-content">
+                                <img id="img01" style="max-width:100%">
+                              </div>
+                            </div>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="get" action="https://www.google.com/search" target="_blank">
+										<input type="search" name="q" id="query" placeholder="Buscar en Google" autofocus required/>
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Ponerse en contacto</h2>
+									</header>
+									<p>Si requiere nuestros servicios, consultas o dudas, no dude en contactar para más información contacte a</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="mailto:marchelo.bm.1989@gmail.com?Subject=Interesado%20en%20sus%20servicios">marchelo.bm.1989@gmail.com</a></li>
+										<li class="icon solid fa-phone"><a href="tel:+56948470283">(+569) 4847 0283</a></li>
+										<li class="icon solid fa-home">Puente Alto<br />
+											Región Metropolitanas, Chile</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; 2021. Todos los derechos reservados. <a href="https://unsplash.com">Unsplash</a>. Diseño: <a href="https://html5up.net">HTML5 UP</a>. Editado:<a href="https://marchelo1989.github.io/"> Marcelo Burgos</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
