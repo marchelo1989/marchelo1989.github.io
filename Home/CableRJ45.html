@@ -12,6 +12,21 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
         <!-- Icono de la pagina WEB -->
 		<link rel="shortcut icon" href="ico/favicon.png" />
+        <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'menus/menu.html');
+        xhr.setRequestHeader('Content-Type', 'text/plain');
+        xhr.send();
+        xhr.onload = function (data) {
+            document.querySelector("nav").innerHTML = data.currentTarget.response;
+            //para más de una barra de navegación
+            /*var navs = document.querySelectorAll("nav");
+            for(var i=0; i<navs.length; i++) {
+                navs[i].innerHTML = data.currentTarget.response;
+            }*/
+            
+        };
+    </script>
 	</head>
 	<body class="is-preload">
 
@@ -104,14 +119,9 @@
 
 							<!-- Menu -->
 								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-									</ul>
-								</nav>
-
+                                
+                                </nav>
+                            
 							<!-- Section -->
 								<section>
 									<header class="major">
