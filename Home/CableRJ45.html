@@ -12,21 +12,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
         <!-- Icono de la pagina WEB -->
 		<link rel="shortcut icon" href="ico/favicon.png" />
-        <script>
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'menus/menu.html');
-        xhr.setRequestHeader('Content-Type', 'text/plain');
-        xhr.send();
-        xhr.onload = function (data) {
-            document.querySelector("nav").innerHTML = data.currentTarget.response;
-            //para más de una barra de navegación
-            /*var navs = document.querySelectorAll("nav");
-            for(var i=0; i<navs.length; i++) {
-                navs[i].innerHTML = data.currentTarget.response;
-            }*/
-            
-        };
-    </script>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -118,9 +105,7 @@
 								</section>
 
 							<!-- Menu -->
-								<nav id="menu">
-                                
-                                </nav>
+								<div class="menuContainer"></div>
                             
 							<!-- Section -->
 								<section>
@@ -154,4 +139,9 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+    <script>
+    $(document).ready(function () {
+        $('.menuContainer').load('menus/menu.html');
+    });
+  </script>
 </html>
