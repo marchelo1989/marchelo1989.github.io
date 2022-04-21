@@ -13,7 +13,8 @@
         <!-- Icono de la pagina WEB -->
 		<link rel="shortcut icon" href="ico/favicon.png" />
         
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/menu.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -105,7 +106,14 @@
 								</section>
 
 							<!-- Menu -->
-								<div class="menuContainer"></div>
+                            <nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+                                
+                                    <div id="menu1"></div>
+                            </nav>
+								
                             
 							<!-- Section -->
 								<section>
@@ -139,9 +147,4 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
-    <script>
-    $(document).ready(function () {
-        $('.menuContainer').load('menus/menu.html');
-    });
-  </script>
 </html>
