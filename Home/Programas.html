@@ -13,10 +13,13 @@ and open the template in the editor.
 			var plataforma = navigator.platform  ;
 			//alert("Dispositivo Detectado: "+plataforma);
 			  if(plataforma=="Win32"){
-			  window.location.href ="ProgramasWindows.html";
+                  window.location.href ="ProgramasWindows.html";
 			  }else if (plataforma=="Linux x86_64") {
-			  window.location.href ="ProgramasUbuntu.html";
-			  }
+                  window.location.href ="ProgramasUbuntu.html";
+			  }else if (plataforma=="Linux armv81") {
+                  alert("Dispositivo Detectado: Android Abrir esta pagina desde un PC");
+                  window.location.href ="Home/index.html";
+              }
 		</script>
     </head>
     <body>

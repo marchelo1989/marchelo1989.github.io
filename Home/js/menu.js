@@ -11,4 +11,5 @@ function cargarEncabezado(){
     el.innerHTML = barra;
   
 }
+
 window.onload = cargarEncabezado;
