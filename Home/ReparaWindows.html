@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Reparar Windows</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="css/estiloModal.css" />
+        <!-- Icono de la pagina WEB -->
+		<link rel="shortcut icon" href="ico/favicon.png" />
+        <!-- Para el Encabezado -->
+        <script src="js/menu.js"></script>
+        <!-- Metodo para imagenes a full pantalla -->
+        <script src="js/modal.js"></script>
+        
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+								<a href="index.html" class="logo"><strong>MarcheBMPC</strong> por Marcelo Burgos </a>
+								<ul class="icons">
+									<!-- Encabezado de la pagina-->
+                                    <div id="encabezado"></div>
+								</ul>
+							</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Reparar de Windows</h1>
+									</header>
+                                    
+                                    <h2>Método Express</h2>
+                                    <div class="row">
+                                            <h3>Para reparar Windows de forma más resumida posible probar antes de ver las demás opciones </h3>
+                                            <ol>
+                                                <li><b>CHKDSK</b>: Revisar si hay sectores dañas en el disco para esto tenemos 2 formas de comprobar:</li>
+                                                <ul>
+                                                    <li>Desde CMD (Como Administrador)</li>
+                                                    <ol>
+                                                        <li>Comando: <code>CHKDSK C:</code></li>
+                                                        <li>Revisará el sistema el sistema por completo y nos dirá si hay algún sector dañado del disco.</li>
+                                                        <span class="image fit"><img src="images/RepararWindows/ComandoExpress1.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer" width="100" height="100" onclick="onClick(this)"/></span>
+                                                    </ol>
+                                                    <li>Desde el escritorio</li>
+                                                    <ol>
+                                                        <li>Clip derecho en el disco del sistema Propiedades</li>
+                                                        <li>En la ventana de Herramientas seleccionamos Comprobar y Examinar Unidad</li>
+                                                        <span class="image fit"><img src="images/RepararWindows/ComandoExpress2.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer" width="100" height="100" onclick="onClick(this)"/></span>
+                                                        <li>Después de esperar algunos minutos (dependiendo del sistema y disco) nos mostrara una venta</li>
+                                                        <li>Nos dirá si hay sectores dañados y si los hay los reparar</li>
+                                                        <span class="image fit"><img src="images/RepararWindows/ComandoExpress4.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer" width="100" height="100" onclick="onClick(this)"/></span>
+                                                    </ol>
+                                                </ul>
+                                                <li><b>Scannow</b>: Repara Windows desde el cache de instalación de Windows si esta bien instalado repara todos los archivos dañados de windows</li>
+                                                <ul>
+                                                    <li>Desde CMD (Como Administrador)</li>
+                                                    <ol>
+                                                        <li>Ejecutamos el siguiente comando en CMD</li>
+                                                        <li>Comando: <code>sfc /scannow</code></li>
+                                                        <span class="image fit"><img src="images/RepararWindows/ComandoExpress4.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer" width="100" height="100" onclick="onClick(this)"/></span>
+                                                    </ol>
+                                                </ul>
+                                                <li><b>Dism</b>: La herramienta de administración y mantenimiento de imágenes de implementación (DISM) es un archivo ejecutable de línea de comandos a nivel de administrador disponible en Windows, el cual se puede utilizar para reparar la imagen de Windows o para modificar medios de instalación de Windows.</li>
+                                                <ul>
+                                                    <li>Desde CMD (Como Administrador)</li>
+                                                    <ol>
+                                                        <li>Ejecutamos el siguiente comando en CMD</li>
+                                                        <li>Comando: <code>dism /online /cleanup-image /sacanhealth</code></li>
+                                                        <span class="image fit"><img src="images/RepararWindows/ComandoExpress5.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer" width="100" height="100" onclick="onClick(this)"/></span>
+                                                        <li>Pero si encuentra errores ejcutamos el siguiente comando</li>
+                                                        <li>Comando: <code>dism /online /cleanup-image /RestoreHealth</code></li>
+                                                        <span class="image fit"><img src="images/RepararWindows/ComandoExpress6.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer" width="100" height="100" onclick="onClick(this)"/></span>
+                                                    </ol>
+                                                </ul>
+                                                <li>4.	Si las 3 fallan toca formatear el sistema operativo de Windows. </li>
+                                            </ol>
+                                        </div>
+                                                  
+                                    <hr class="major" />
+                                    
+                                    <div class="posts">
+										<article>
+											<a href="#" class="image"><img src="images/RepararWindows/CHKDSK.jpg" alt="Imagen No Disponible" /></a>
+											<h3>Reparar desde CHKDSK</h3>
+											<p>Este puede ser discos duros mecánicos, SSD o dispositivos USB conectados. Mediante CHKDSK podremos mejorar el rendimiento de la unidad, y optimizar su utilización.</p>
+											<ul class="actions">
+												<li><a href="ReparaWindows.html#CHKDSK" class="button">Más</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/RepararWindows/SFC.jpg" alt="Imagen No Disponible" /></a>
+											<h3>Reparar desde SFC</h3>
+											<p>Su principal función es la de buscar y reparar daños en los archivos del sistema, como claves y carpetas de registro y ficheros críticos para el funcionamiento del sistema.</p>
+											<ul class="actions">
+												<li><a href="ReparaWindows.html#SFC" class="button">Más</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/RepararWindows/DISM.jpg" alt="Imagen No Disponible" /></a>
+											<h3>Reparar desde DISM</h3>
+											<p>Herramienta de línea de comandos que se puede utilizar para reparar imágenes de Windows, lo que le permite solucionar los problemas derivados de una imagen de sistema corrupta sin tener que reinstalar el sistema operativo por completo.</p>
+											<ul class="actions">
+												<li><a href="ReparaWindows.html#DISM" class="button">Más</a></li>
+											</ul>
+										</article>
+									</div>
+                                    
+                                    <hr class="major" />
+                                    
+                                    <h2>Método Para Windows</h2>
+                                    <div class="row">
+                                        <div class="col-6 col-12-small">
+                                            <a name="CHKDSK" id="CHKDSK"></a>
+                                            <h3>A través de CHKDSK</h3>
+                                            <ol>
+                                                <li>Desde CMD (Como Administrador)</li>
+                                                <li>Una vez abierta, escribiremos el comando tal y como hemos señalado en el apartado anterior. podremos utilizar varias opciones de forma consecutiva, para conseguir un completo análisis y reparación de nuestro disco duro. </li>
+                                                <li>Comando: <code>CHKDSK C: /f /r /x /v</code></li>
+                                                <li>4.	En ocasiones no saldrá un mensaje que el proceso no podrá ejecutar pero se podrá hacer en el próximo reinicio del sistema le damos S </li>
+                                                <span class="image fit"><img src="images/RepararWindows/CHKDSK1.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer" width="100" height="100" onclick="onClick(this)"/></span>
+                                                <li>Simultáneamente estaremos ejecutando varias de estas opciones para conseguir un mejor y más detallado resultado.</li>
+                                                <li></li>
+                                                <span class="image fit"><img src="images/RepararWindows/CHKDSK2.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer" width="100" height="100" onclick="onClick(this)"/></span>
+                                                <li>Si es desde el Reinicio del sistema</li>
+                                                <span class="image fit"><img src="images/RepararWindows/CHKDSK2.1.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer" width="100" height="100" onclick="onClick(this)"/></span>
+                                            </ol>
+                                        </div>
+                                        
+                                        <div class="col-6 col-12-small">
+                                            <a name="SFC" id="SFC"></a>
+                                            <h3>A través de SFC</h3>
+                                            <ol>
+                                                <li>Si abrimos el menú inicio y escribimos “PowerShell” o “CMD” podremos acceder a las terminales en donde este comando puede ser ejecutado. En el resultado de búsqueda, tendremos que pulsar botón derecho sobre la opción para elegir “Ejecutar como Administrador”.</li>
+                                                <li>Si escribimos en el terminal alguno de estos dos comandos, y pulsamos Enter:</li>
+                                                <li>Comando: <code>sfc</code></li>
+                                                <li>Comando: <code>sfc /?</code></li>
+                                                <li>Obtendremos información acerca de este comando, así como toda la lista de opciones, que, situadas detrás del comando principal, nos darán determinadas funcionalidades.</li>
+                                                <span class="image fit"><img src="images/RepararWindows/SFC1.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer" width="100" height="100" onclick="onClick(this)"/></span>
+                                                <li>En la parte superior veremos su sintaxis básica, que será simplemente el comando principal, seguido de una barra y la opción, bien en minúscula o en mayúscula.<b> SFC [/opción]</b></li>
+                                                <li>Estas opciones serán las siguientes:</li>
+                                                <ul>
+                                                    <li><code>SFC /SCANNOW</code>: utilidad principal para salvarnos el culo. Examina los archivos protegidos del sistema (los que están situados en C:\Windows\WinSxS) y los repara si es posible. </li>
+                                                    <li><code>SFC /VERIFYONLY</code>: con esta opción solamente verificamos la integridad de los archivos. Es útil para comprobar de forma más rápida que usando la opción anterior, si los archivos están dañados, en cuyo caso no lo notificará.</li>
+                                                    <li><code>SFC /SCANFILE</code>: verifica la integridad de un determinado archivo que nosotros le pongamos y lo repara, si es posible. Su sintaxis es “/SCANFILE=ruta archivo”.</li>
+                                                    <li><code>SFC /VERIFYFILE</code>: verifica la integridad del archivo, pero no emprende acciones de reparación. Su sintaxis es “SFC /VERIFYFILE=ruta archivo”.</li>
+                                                    <li><code>SFC /OFFBOOTDIR</code>: opción para reparar el arranque de Windows sin conexión. Sin conexión significa que accederemos a un disco duro que no esté en funcionamiento, por lo que esta opción tendremos que utilizarla desde un DVD de instalación de Windows, por ejemplo. Su sintaxis seria: “SFC /OFFBOOTDIR=ruta completa del archivo”.</li>
+                                                    <li><code>SFC /OFFWINDIR</code>: será lo mismo que lo anterior, pero para un directorio en concreto del disco duro.</li>
+                                                    <li><code>SFC /OFFLOGFILE</code>: reparación de un archivo de registro en las mismas condiciones que el caso anterior.</li>
+                                                </ul>
+                                                <li>En la mayoría de ocasiones utilizaremos simplemente SFC /SCANNOW, ya que es la opción que engloba todas las demás y que realiza un barrido completo y posterior reparación de los ficheros protegidos del sistema desde dentro del propio sistema (online) o con el disco en funcionamiento.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    <!--
+									
+                                    -->
+									<hr class="major" />
+                                    
+                                    <div class="row">
+                                        <div class="col-6 col-12-small">
+                                            <a name="DISM" id="DISM"></a>
+                                            <h3>A través de DISM</h3>
+                                            <p>DISM son las siglas de Deployment Imagen Servicing and Management y, tal como explica Microsoft, se trata de una herramienta de línea de comandos que se puede utilizar para reparar imágenes de Windows, lo que le permite solucionar los problemas derivados de una imagen de sistema corrupta sin tener que reinstalar el sistema operativo por completo.</p>
+                                            <ol>
+                                                <li>Escribe "cmd" (sin comillas) en el cuadro de búsqueda, Selecciona la aplicación Símbolo del sistema, haz clic en la opción Ejecutar como administrador</li>
+                                                <li>Ahora, lo primero que tienes que hacer es comprobar el estado de salud de tu equipo. Para ello, introduce el siguiente:</li>
+                                                <li>Comando: <code>DISM /Online /Cleanup-Image /CheckHealth</code></li>
+                                                <li>Espera unos segundos hasta que la comprobación se complete. Si aparece algún error antes de la finalización, es posible que tu PC esté dañado.</li>
+                                                <span class="image fit"><img src="images/RepararWindows/DISM1.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer" width="100" height="100" onclick="onClick(this)"/></span>
+                                                <li>A continuación, ejecuta la operación ScanHealth mediante este: </li>
+                                                <li>Comando: <code>DISM /Online /Cleanup-Image /ScanHealth</code></li>
+                                                <li>Esto buscará buscará errores en el sistema. Espera hasta que la operación se complete.</li>
+                                                <li>El siguiente paso consiste en ejecutar la operación RestoreHealth, que reemplazará todos los componentes dañados del sistema operativo e implementará una imagen nueva en tu PC. Esta operación llevará bastante tiempo, así que ten paciencia. Puedes iniciarla con este: </li>
+                                                <li>Comando: <code>DISM /Online /Cleanup-Image /RestoreHealth</code></li>
+                                                <li>Después de utilizar DISM, tienes que usar la herramienta SFC (System File Checker), que verifica la integridad de los archivos y restaura por completo la salud de tu PC en función de la imagen implementada por DISM. Para ello, introduce el</li>
+                                                <li>Comando: <code>SFC /ScanNow</code></li>
+                                                <span class="image fit"><img src="images/RepararWindows/DISM2.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer" width="100" height="100" onclick="onClick(this)"/></span>
+                                                <li>y espera hasta que el proceso termine (tardará bastante, así que ten paciencia).</li>
+                                            </ol>
+                                                                                        
+                                        </div>
+                                        
+                                    </div>
+
+
+									<hr class="major" />
+
+								</section>
+                            <div id="modal01" class="modal" onclick="this.style.display='none'">
+                              <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                              <div class="modal-content">
+                                <img id="img01" style="max-width:100%">
+                              </div>
+                            </div>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="get" action="https://www.google.com/search" target="_blank">
+										<input type="search" name="q" id="query" placeholder="Buscar en Google" autofocus required/>
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Ponerse en contacto</h2>
+									</header>
+									<p>Si requiere nuestros servicios, consultas o dudas, no dude en contactar para más información contacte a</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="mailto:marchelo.bm.1989@gmail.com?Subject=Interesado%20en%20sus%20servicios">marchelo.bm.1989@gmail.com</a></li>
+										<li class="icon solid fa-phone"><a href="tel:+56948470283">(+569) 4847 0283</a></li>
+										<li class="icon solid fa-home">Puente Alto<br />
+											Región Metropolitanas, Chile</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; 2021. Todos los derechos reservados. <a href="https://unsplash.com">Unsplash</a>. Diseño: <a href="https://html5up.net">HTML5 UP</a>. Editado:<a href="https://marchelo1989.github.io/"> Marcelo Burgos</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
