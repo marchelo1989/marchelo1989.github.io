@@ -10,10 +10,13 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="css/estiloModal.css" />
         <!-- Icono de la pagina WEB -->
 		<link rel="shortcut icon" href="ico/favicon.png" />
         <!-- Para el Encabezado -->
         <script src="js/menu.js"></script>
+        <!-- Metodo para imagenes a full pantalla -->
+        <script src="js/modal.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -89,9 +92,9 @@
                                     <h2>Compatibles</h2>
                                     <div class="box alt">
                                         <div class="row gtr-50 gtr-uniform">
-                                            <div class="col-4"><span class="image fit"><img src="images/DS4Windows1.jpg" alt="" /></span></div>
-                                            <div class="col-4"><span class="image fit"><img src="images/DS4Windows2.jpg" alt="" /></span></div>
-                                            <div class="col-4"><span class="image fit"><img src="images/DS4Windows3.jpg" alt="" /></span></div>
+                                            <div class="col-4"><span class="image fit"><img src="images/DS4Windows1.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)" /></span></div>
+                                            <div class="col-4"><span class="image fit"><img src="images/DS4Windows2.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)" /></span></div>
+                                            <div class="col-4"><span class="image fit"><img src="images/DS4Windows3.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)" /></span></div>
                                         </div>
                                     </div>
                                     
@@ -103,6 +106,12 @@
 									<p>DS4Windows es un mapeador de entrada de gamepad de código abierto y un emulador virtual diseñado para usar y conectar su controlador PlayStation (DualShock 3/4 y DualSense 5) a una PC con Windows 10/11.Obtenga la mejor experiencia de juego con funciones de última generación, personalización del gamepad y juegue con menos latencia de entrada en un controlador PS3/PS4/PS5.</p>
 
 								</section>
+                            <div id="modal01" class="modal" onclick="this.style.display='none'">
+                              <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                              <div class="modal-content">
+                                <img id="img01" style="max-width:100%">
+                              </div>
+                            </div>
 
 						</div>
 					</div>

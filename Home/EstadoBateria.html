@@ -10,10 +10,13 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="css/estiloModal.css" />
         <!-- Icono de la pagina WEB -->
 		<link rel="shortcut icon" href="ico/favicon.png" />
         <!-- Para el Encabezado -->
         <script src="js/menu.js"></script>
+        <!-- Metodo para imagenes a full pantalla -->
+        <script src="js/modal.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -58,9 +61,9 @@
                                     <h2>Guia de imagenes</h2>
                                     <div class="box alt">
                                         <div class="row gtr-50 gtr-uniform">
-                                            <div class="col-4"><span class="image fit"><img src="images/BateriasRepo1.jpg" alt="" /></span></div>
-                                            <div class="col-4"><span class="image fit"><img src="images/BateriasRepo2.jpg" alt="" /></span></div>
-                                            <div class="col-4"><span class="image fit"><img src="images/BateriasRepo3.jpg" alt="" /></span></div>
+                                            <div class="col-4"><span class="image fit"><img src="images/BateriasRepo1.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span></div>
+                                            <div class="col-4"><span class="image fit"><img src="images/BateriasRepo2.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span></div>
+                                            <div class="col-4"><span class="image fit"><img src="images/BateriasRepo3.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span></div>
                                         </div>
                                     </div>
 
@@ -78,15 +81,22 @@
                                     <h2>Guia de imagenes</h2>
                                     <div class="box alt">
                                         <div class="row gtr-50 gtr-uniform">
-                                            <div class="col-4"><span class="image fit"><img src="images/BateriasRepo1.jpg" alt="" /></span></div>
-                                            <div class="col-4"><span class="image fit"><img src="images/BateriasInfo1.jpg" alt="" /></span></div>
-                                            <div class="col-4"><span class="image fit"><img src="images/BateriasInfo2.jpg" alt="" /></span></div>
+                                            <div class="col-4"><span class="image fit"><img src="images/BateriasRepo1.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span></div>
+                                            <div class="col-4"><span class="image fit"><img src="images/BateriasInfo1.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span></div>
+                                            <div class="col-4"><span class="image fit"><img src="images/BateriasInfo2.jpg" alt="Imagen No Disponible" style="max-width:100%;cursor:pointer"  onclick="onClick(this)"/></span></div>
                                         </div>
                                     </div>
 
 									<hr class="major" />
 
 								</section>
+                            <!-- Metodo para el Modal de Imgenes -->
+                            <div id="modal01" class="modal" onclick="this.style.display='none'">
+                              <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                              <div class="modal-content">
+                                <img id="img01" style="max-width:100%">
+                              </div>
+                            </div>
 
 						</div>
 					</div>
