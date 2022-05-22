@@ -14,6 +14,9 @@ function cargarGoldhen212(){
 function cargarGoldhen22(){
 	document.getElementById("msj").innerHTML = "Goldhen v2.2 para Firmware 9.00";
 }
+function cargarGoldhen222(){
+	document.getElementById("msj").innerHTML = "Goldhen v2.2.2 para Firmware 9.00";
+}
 
 /* Payloads */
 function cargarFTP(){
