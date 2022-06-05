@@ -24,7 +24,7 @@ function ps4chk(){
 		default:
 			alert('¡No estás en un sistema PlayStation!'+ uaStringCheck +'Todas las funciones han sido deshabilitadas.');
 			//document.write( "Informacion Navegador:"+uaStringCheck+" <p />" );
-			//disable_all();
+			disable_all();
 			break;
 	}
 }
