@@ -1,33 +1,45 @@
 /* exploits */
-function cargarGoldhen2b2(){
+function infoBinLoader(){
+	document.getElementById("msj").innerHTML = "Enviar una carga útil usando el puerto 9020";
+}
+function infoGoldhen2b2(){
 	document.getElementById("msj").innerHTML = "Goldhen v2.0b2 para Firmware 9.00";
 }
-function cargarGoldhen21(){
+function infoGoldhen21(){
 	document.getElementById("msj").innerHTML = "Goldhen v2.1 para Firmware 9.00";
 }
-function cargarGoldhen211(){
+function infoGoldhen211(){
 	document.getElementById("msj").innerHTML = "Goldhen v2.1.1 para Firmware 9.00";
 }
-function cargarGoldhen212(){
+function infoGoldhen212(){
 	document.getElementById("msj").innerHTML = "Goldhen v2.1.2 para Firmware 9.00";
 }
-function cargarGoldhen22(){
+function infoGoldhen22(){
 	document.getElementById("msj").innerHTML = "Goldhen v2.2 para Firmware 9.00";
 }
-function cargarGoldhen222(){
+function infoGoldhen222(){
 	document.getElementById("msj").innerHTML = "Goldhen v2.2.2 para Firmware 9.00";
 }
-function cargarGoldhen23b2(){
+function infoGoldhen23b2(){
 	document.getElementById("msj").innerHTML = "Goldhen v2.3b.2 para Firmware 9.00 No Usar ";
 }
+
+/* Payloads */
+function infoAppDumper(){
+	document.getElementById("msj").innerHTML = "Copiar el juego solo a la unidad USB";
+}
+function infoWebActivador(){
+	document.getElementById("msj").innerHTML = "Active su cuenta de usuario desde el navegador de la consola";
+}
+
+
+
 
 /* Payloads */
 function cargarFTP(){
 	document.getElementById("msj").innerHTML = "Accede a esta consola a través de FTP (ten cuidado con lo que haces)";
 }
-function cargarAppDumper(){
-	document.getElementById("msj").innerHTML = "Descarga tus juegos (se necesita una unidad USB en exFAT)";
-}
+
 function cargarModeleDumper(){
 	document.getElementById("msj").innerHTML = "Esta carga útil nos permite volcar los módulos descifrados de /system, /system_ex, /update y la raíz del sistema de archivos en un dispositivo USB";
 }
@@ -43,9 +55,7 @@ function cargarEnableUpdate(){
 function cargarHistoryBlocker(){
 	document.getElementById("msj").innerHTML = "Desactive el historial del navegador, solo mostrará las páginas de uso frecuente una vez que abra";
 }
-function cargarBinLoader(){
-	document.getElementById("msj").innerHTML = "Inyecte una carga útil utilizando la IP de la consola y el puerto 9020";
-}
+
 function cargarLinux1GB(){
 	document.getElementById("msj").innerHTML = "Cargue Linux desde una unidad USB con 1 GB de VRAM";
 }
@@ -70,9 +80,7 @@ function cargarPs4Debug(){
 function cargarRIFRenamer(){
 	document.getElementById("msj").innerHTML = "Cambia el tipo de licencia de los juegos instalados de FALSO a GRATIS, úselo para resolver juegos que no funcionarán con la carga útil normal de HEN";
 }
-function cargarWebActivador(){
-	document.getElementById("msj").innerHTML = "Active su cuenta de usuario desde el navegador de la consola";
-}
+
 function cargarWebRTE(){
 	document.getElementById("msj").innerHTML = "Requerido para activar trucos a través del sitio web de PS4 Trainer";
 }
@@ -85,9 +93,10 @@ function cargarDisableASLR(){
 function cargarExitlDU(){
 	document.getElementById("msj").innerHTML = "ExitlDU para firmware 7.5x";
 }
+
 function titulopag(){
-	document.getElementById("msj").innerHTML = "PS4 7.5x Host x MarcheBM";
+	document.getElementById("msj").innerHTML = "PS4 9.00 Host x MarcheBM";
 }
-function cargarAtras(){
+function infoAtras(){
 	document.getElementById("msj").innerHTML = "Regresar a la sección de firmware";
 }
